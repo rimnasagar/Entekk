@@ -1,0 +1,288 @@
+/* Extra Small Devices (phones): */
+
+@media only screen and (max-width: 600px) { 
+    
+    
+    /* SECTION PAGE OVERLAP */
+    .page__overlap__body .page__overlap__body__content__p{
+    font-size: 32px;
+}
+
+.page__overlap__body__content__img{
+    display: flex;
+    align-items: center;
+    width:32%;
+}
+.menu-toggle {
+    display: block; /* Display the hamburger icon on smaller screens */
+  }
+
+  /* HAMBURGER MENU */
+.menu-list {
+  display: none;
+  width: 100vw;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  background: #cbcbcb;
+  position: absolute;
+  left: -30px;
+  justify-content: center;
+  align-items: center;
+  padding: 23rem 0 5rem 0;
+  z-index: 99;
+}
+.menu-list .text-wrapper {
+  color: black;
+}
+.contact-us {
+  display: none !important;
+}
+.menu-toggle {
+  display: block; /* Display the hamburger icon on smaller screens */
+}
+
+#menu-toggle:checked ~ .menu li {
+  border: 1px solid #333;
+  height: 2.5em;
+  padding: 0.5em;
+  transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.menu-button {
+  position: absolute;
+  float: right;
+  top: 50px;
+  right: 89px;
+  z-index: 999;
+}
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+
+}
+
+
+
+
+
+
+
+/* Small Devices (tablets): */
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    
+    
+    
+    /* SECTION PAGE OVERLAP */
+.page__overlap__body .page__overlap__body__content__p{
+    font-size: 42px;
+}
+
+/* HAMBURGER MENU */
+.menu-list {
+    display: none;
+    width: 100vw;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    background: #cbcbcb;
+    position: absolute;
+    left: -30px;
+    justify-content: center;
+    align-items: center;
+    padding: 23rem 0 5rem 0;
+    z-index: 99;
+}
+.menu-list .text-wrapper {
+    color: black;
+}
+ .contact-us {
+    display: none !important;
+}
+.menu-toggle {
+    display: block; /* Display the hamburger icon on smaller screens */
+  }
+
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu-button {
+    position: absolute;
+    float: right;
+    top: 50px;
+    right: 89px;
+    z-index: 999;
+  }
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
+  
+  .menu-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+  
+  .menu-button::after {
+    content: '';
+    margin-top: 8px;
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
+/* BOOKNOW */
+
+  /* .page__booknow__left{
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start; */
+    
+    /* gap: 58px;
+     
+    margin-left: 14rem;
+  } */ }
+
+
+
+
+
+
+
+
+
+/* Medium Devices (small laptops): */
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    
+    /* SECTION PAGE OVERLAP */
+    .page__overlap__body .page__overlap__body__content__p{
+        font-size: 72px;
+    }
+
+    /* HEADER NAV LINKS */
+
+
+    /* BOOKNOW */
+    /* .page__booknow__left{
+      
+      
+      gap: 58px;
+       
+      margin-left: 14rem;
+    } */
+    
+
+}
+
+
+
+
+
+
+
+
+/* Large Devices (desktops): */
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) { 
+    
+    
+   /* SECTION PAGE OVERLAP */
+.page__overlap__body .page__overlap__body__content__p{
+    font-size: 89px;
+}
+
+/* BOOKNOW */
+
+
+/* .page__booknow__left{
+      
+      
+  gap: 58px;
+   
+  margin-left: 10rem;
+} */
+
+
+
+}
+
+
+
+
+
+/* Extra Large Devices (large desktops): */
+
+@media only screen and (min-width: 1201px) {
+    
+/* SECTION PAGE OVERLAP */
+.page__overlap__body .page__overlap__body__content__p{
+    font-size: 89px;
+}
+
+/* BOOKNOW */
+/* .page__booknow{
+  justify-content: space-between;
+} */
+.page__booknow__left{
+      
+      
+  gap: 58px;
+   
+  margin-left: 10rem;
+}
+
+ }
+
+

@@ -1,0 +1,7 @@
+:root {
+    --primary-red: rgba(215, 61, 53, 1);
+    --secondary-blue: rgba(42, 76, 149, 1);
+    --tertiary-green: rgba(0, 127, 137, 1);
+    --light-red: rgba(215, 61, 53, 0.1);
+    --variable-collection-image-overlay: rgba(0, 0, 0, 0.03);
+  }
