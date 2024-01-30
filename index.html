@@ -1,509 +1,914 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="styleguide.css" />
-        <link rel="stylesheet" href="media.css" />
-        <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <title>Entek</title>
-        <script src="https://cdn.tailwindcss.com"></script>
+<html lang="en" class="overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="media.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
-        
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <title>Entek</title>
+    <style>
+      /* Additional custom styles for the slider */
+      .slider-container {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+    
+      .slick-prev, .slick-next {
+        font-size: 24px;
+        color: #2a4c95;
+      }
+    </style>
 
-    </head>
-    <body>
-        <div class="page">
-            <section class="determined to dream">
-       
+    <style>
+      @keyframes slideInLeft {
+        0% {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    
+      @keyframes slideInRight {
+        0% {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    
+      @keyframes slideInBottom {
+        0% {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    
+      .page__blog {
+        opacity: 0;
+        animation: fadeIn 0.5s ease-out forwards;
+      }
+    
+      .in-view .page__blog {
+        opacity: 1;
+      }
 
-                <div class="bg-[#2a4c95] w-full relative">
-                   <div class="bg-gradient-to-r from-blue-500 via-blue-300 to-transparent  w-full h-full ">
-                       <img src="img/pexels-cameron.png" alt="" class="opacity-25" />
-       
-                   </div>
-                   <div class="page__overlap__header absolute top-0 left-0">
-                       <div class="page__overlap__header__logo">
-                           <img
-                               class="page__overlap__header__logo__img"
-                               src="img/logo.svg"
-                           />
-                       </div>
-                       <label class='menu-button-lbel' for="menu-toggle">
-                           <div class='menu-button'  id="menu-button-toggle" onclick="toggleMenu()"></div>
-                       </label>
-                       <div class="page__overlap__header__menu" >
-       
-                           <!-- <a href="">HOME</a>
+</style>
+
+    <style>
+     
+  @keyframes slideInFromRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .slide-in-from-right {
+    animation: slideInFromRight 1s ease-out 12s; /* Adjust the duration and timing function as needed */
+  }
+  .slide-in-from-rightt {
+    animation: slideInFromRight 1s ease-out 13s; /* Adjust the duration and timing function as needed */
+  }
+  .slide-in-from-righttt {
+    animation: slideInFromRight 1s ease-out 14s; /* Adjust the duration and timing function as needed */
+  }
+  .slide-in-from-righttt {
+    animation: slideInFromRight 1s ease-out 15s; /* Adjust the duration and timing function as needed */
+  }
+  .slide-in-from-righttt {
+    animation: slideInFromRight 1s ease-out 16s; /* Adjust the duration and timing function as needed */
+  }
+</style>
+<style>
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .page__client__list img {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 19s forwards; /* Initial delay before the first animation */
+    animation-iteration-count: infinite; /* Repeat the animation infinitely */
+  }
+
+  .page__client__list img:nth-child(1) {
+    animation-delay: 0.5s; /* Adjust the delay for the first image */
+  }
+
+  .page__client__list img:nth-child(2) {
+    animation-delay: 1s; /* Increase the delay for subsequent images */
+  }
+
+  .page__client__list img:nth-child(3) {
+    animation-delay: 2s;
+  }
+
+  .page__client__list img:nth-child(4) {
+    animation-delay: 3s;
+  }
+
+  .page__client__list img:nth-child(5) {
+    animation-delay: 4s;
+  }
+
+  .page__client__list img:nth-child(6) {
+    animation-delay: 5s; /* Adjust the delay for the repeat */
+  }
+</style>
+
+    <style>
+      @keyframes slideInFromLeft {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .fade-in {
+    animation: slideInFromLeft 1.5s ease-out 1s; /* Adjust the duration, timing function, and delay as needed */
+  }
+  .delayed-fade-in {
+    animation: slideInFromLeft 1.5s ease-out 2s; /* Adjust the duration, timing function, and delay as needed */
+  }
+  .delayed-fade-in-2{
+    animation: slideInFromLeft 1.5s ease-out 3s;
+  }
+  .delayed-fade-in-3{
+    animation: slideInFromLeft 1.5s ease-out 4s;
+  }
+  .fade-inn {
+    animation: slideInFromLeft 1.5s ease-out 6s; /* Adjust the duration, timing function, and delay as needed */
+  }
+  .delayed-fade-inn {
+    animation: slideInFromLeft 1.5s ease-out 7s; /* Adjust the duration, timing function, and delay as needed */
+  }
+  .delayed-fade-inn-2{
+    animation: slideInFromLeft 1.5s ease-out 8s;
+  }
+  .delayed-fade-inn-3{
+    animation: slideInFromLeft 1.5s ease-out 9s;
+  }
+    
+      .slide-in-from-left {
+        animation: slideInFromLeft 1.5s ease-out; /* Adjust the duration and timing function as needed */
+      }
+      .slide-in-from-leftt {
+        animation: slideInFromLeft 1.5s ease-out 1s; /* Adjust the duration and timing function as needed */
+      }
+      </style>
+    <style>
+      @keyframes slideInFromBottom {
+        0% {
+          transform: translateY(100%);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+    
+      .slide-in-from-bottom {
+        animation: slideInFromBottom 1.5s ease-out; /* Adjust the duration and timing function as needed */
+      }
+      .slide-in-from-bottom1 {
+        animation: slideInFromBottom 1.5s ease-out 7s; /* Adjust the duration and timing function as needed */
+      }
+      .slide-in-from-bottom2 {
+        animation: slideInFromBottom 1.5s ease-out 9s; /* Adjust the duration and timing function as needed */
+      }
+      .slide-in-from-bottom3 {
+        animation: slideInFromBottom 1.5s ease-out 17s; /* Adjust the duration and timing function as needed */
+      }
+      </style>
+    <style>
+      @keyframes fadeInLeft {
+        0% {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+  
+      @keyframes fadeInRight {
+        0% {
+          opacity: 0;
+          transform: translateX(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+  
+      /* Left Section Animation */
+      .left-section {
+        animation: fadeInLeft 1s ease-out;
+      }
+  
+      /* Right Section Animation */
+      .right-section {
+        animation: fadeInRight 1s ease-out;
+      }
+    </style>
+
+    <style>
+      @keyframes helicopterAnimation {
+        0%, 100% {
+          transform: translateX(-50%);
+        }
+        50% {
+          transform: translateX(50%);
+        }
+      }
+  
+      .animation-container  {
+        animation: helicopterAnimation 5s linear 1;
+      }
+  
+      .helicopter img {
+        width: 100%; /* Ensure the image takes the full width of its container */
+        height: auto; /* Maintain aspect ratio */
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/Entek_Git/output.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css"
+    />
+   <!-- Include Slick CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+  <!-- Include Slick Theme CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Include Slick JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  </head>
+  <body class="overflow-x-hidden">
+    <div class="page">
+      <section class="determined to dream">
+        <div class="bg-[#2a4c95] w-full relative">
+          <div
+            class="bg-gradient-to-r from-blue-500 via-blue-300 to-transparent w-full h-full"
+          >
+            <img
+              src="img/pexels-cameron.png"
+              alt=""
+              class="opacity-25 w-full h-auto"
+            />
+          </div>
+          <div class="page__overlap__header absolute top-0 left-0">
+            <div class="page__overlap__header__logo">
+              <img
+                class="page__overlap__header__logo__img"
+                src="img/logo.svg"
+              />
+            </div>
+            <label class="menu-button-lbel" for="menu-toggle">
+              <div
+                class="menu-button"
+                id="menu-button-toggle"
+                onclick="toggleMenu()"
+              ></div>
+            </label>
+            <div class="page__overlap__header__menu">
+              <!-- <a href="">HOME</a>
                            <a href="">ABOUT</a>
                            <a href="">PRODUCTS</a>
                            <a href="">SOLUTIONS</a>
                            <a href="">SUPPORT</a>
                            <a href="">CAREER</a> -->
-                           <div class="menu-list" id="menu-list">
-                               <a href="#" 
-                                   ><div class="text-wrapper">HOME</div></a
-                               >
-                              
-                               <a href="#">
-                                   <div class="text-wrapper">ABOUT</div></a
-                               >
-                               <a href="#">
-                                   <div class="text-wrapper">
-                                       PRODUCTS
-                                   </div></a
-                               >
-                               <a href="#">
-                                   <div class="text-wrapper">
-                                       SOLUTIONS
-                                   </div></a
-                               >
-                               <a href="#">
-                                   <div class="text-wrapper">
-                                       SUPPORT
-                                   </div></a
-                               >
-                               <a href="#">
-                                   <div class="text-wrapper">
-                                       CAREER
-                                   </div></a
-                               >
-                           </div>
-                       </div>
-                       <div class="page__overlap__header__content">
-                           <div class="contact-us">
-                               <div class="header-nav">
-                                   <img class="symbol" src="img/symbol.png" />
-                               </div>
-                               <div class="contact-content">
-                                   <div class="header-nav-call">
-                                       Call Anytime
-                                   </div>
-                                   <p class="header-nav-heading">
-                                       +92 ( 8800 ) - 6780
-                                   </p>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="page__requirements__content flex w-full h-full justify-center items-center absolute top-0 left-0 ">
-                       <!-- <div class="page__req__main__content text-center">
+              <div class="menu-list" id="menu-list">
+                <a href="#"><div class="text-wrapper">HOME</div></a>
+
+                <a href="#"> <div class="text-wrapper">ABOUT</div></a>
+                <a href="#"> <div class="text-wrapper">PRODUCTS</div></a>
+                <a href="#"> <div class="text-wrapper">SOLUTIONS</div></a>
+                <a href="#"> <div class="text-wrapper">SUPPORT</div></a>
+                <a href="#"> <div class="text-wrapper">CAREER</div></a>
+              </div>
+            </div>
+            <div class="page__overlap__header__content">
+              <div class="contact-us">
+                <div class="header-nav">
+                  <img class="symbol" src="img/symbol.png" />
+                </div>
+                <div class="contact-content">
+                  <div class="header-nav-call">Call Anytime</div>
+                  <p class="header-nav-heading">+92 ( 8800 ) - 6780</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="page__requirements__content flex w-full h-full justify-center items-center absolute top-0 left-0"
+          >
+            <!-- <div class="page__req__main__content text-center">
                            
                            <h5 class="text-5xl text-white my-10 font-bold">DETERMINED TO DREAM<br />DRIVEN TO DELIVER</p></h5>
                                <a href=""><button class="py-5 px-10 mr-3 bg-red-500 rounded-full text-white">BOOK NOW</button></a>
                                <a href=""><button class="py-5 px-10 bg-white text-black rounded-full">READ MORE</button></a>
        
                        </div> -->
-                       <div class="page__req__main__content text-center relative">
-                           <h5 class="text-4xl lg:text-8xl xl:text-8xl text-white mb-10 font-bold italic">DETERMINED TO DREAM<br />DRIVEN TO DELIVER</h5>
-                          
-                           <img class="page__overlap__body__content__img absolute left-1/2 transform -translate-x-1/2 top-full w-full max-w-screen-lg z-10" src="img/image-4.png" />
-                           <div class="ellipse-shadow bottom-[-220px] lg:bottom-[-348px] xl:bottom-[-348px]"></div>
-                       </div>
-                       <div class="footer__content__about__social__icons absolute bottom-0 right-0 p-6">
-                           <span>
-                               <img class="element" src="img/facebookk.svg" />
-                           </span>
-                           <span>
-                               <img class="element" src="img/linkdin.svg" />
-                           </span>
-                           <span>
-                               <img class="element" src="img/insta.svg" />
-                           </span>
-                       </div>
-       
-       
-       
-                   </div>
-       
-                </div>
-             
-              </section>
-            
-            <section class="page__booknow">
-             
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-[#E7E7E7]">
-        <!-- Left Section -->
-        <div class="flex flex-col justify-center md:ml-40 lg: ml-20 lg:mr-20 sm:ml-20 sm:mr-20">
-          <h2 class="text-2xl font-bold mb-5 text-[#2a4c95] italic font-montserrat ">GET TO KNOW US</h2>
-          <h5 class="text-5xl font-bold mb-5 text-[#2a4c95] font-montserrat line-height-[1.2] "> Our jetly save your time<br />and give you
-            comfort in<br />flights</h5>
-            <p  class="font-montserrat text-[#2a4c95] line-height-[1.2] mb-2">Non augue egestas, commodo velit eget,
-                vestibulum tellus. Curabitur<br />vulputate
-                justo elit, at elementum orci pulvinar vel.
-                Pellentesque habitant morbi<br/> tristique.
-                Pellentesque habitant morbi tristique. Ut
-                non augue egestas,<br />commodo velit eget,
-                vestibulum tellus.</p>
-                <div class="flex items-center mt-5"><img
-                    class="mr-2"
-                    src="img/check.svg"
-                />
-                <p class="text-[#2a4c95] font-bold mt-2 mb-2">
-                    There are many variations of passage
-                    of lorem.
-                </p></div>
-                <div class="flex items-center">
-                    <img
-                                    class="mr-2"
-                                    src="img/check.svg"
-                                />
-                                <p class="text-[#2a4c95] font-bold mt-2 mb-2">
-                                    There are many variations of passage
-                                    of lorem.
-                                </p>
-                </div>
-                <div class="flex items-center mt-8">
-                <a href=""><button class="py-5 px-10 mr-5 bg-[#2a4c95] rounded-full text-white">BOOK NOW</button></a>
-                <!-- <div class="rounded-lg overflow-hidden flex items-center justify-center   " style=" border-color: #2a4c95; border-radius: 36.102px;">
-                       <img src="img/phone-booknow.png" class="w-[27px] h-[27px] " />
-                    </div>  -->
-                    <div class="rounded-full overflow-hidden flex items-center justify-center border-2 border-[#2a4c95]" style="width: 54px; height: 54px;">
-                        <img src="img/phone-booknow.png" class="w-[27px] h-[27px]" alt="Phone Icon">
-                      </div>
-                      <div class="flex flex-col ml-4">
-                        <p class="text-[#2a4c95] mr-2">Call Anytime </p> 
-                      <p class="text-[#2a4c95] font-bold">+92 ( 8800 ) - 6780</p>
-                      </div>
-                    </div>      
-        </div>
-      
-        <!-- Right Section -->
-        <div class="flex justify-center">
-            <div style="position: relative;">
-                <img src="img/pexels-nicolas-petremann-3121030 1.png" class="w-full lg:max-w-lg md:max-w-md" alt="Your Image">
-                <div style="position: absolute; bottom: 40px; right: -60px; padding: 10px;  overflow: hidden; " class="bg-red-600 text-white w-96 h-24">
-                  <p class="text-3xl font-bold font-montserrat">8000+</p>
-                  <p class="font-montserrat text-lg font-bold">Satisfied Clients</p>
-                </div>
-                <div style="position: absolute; top: 90%; left: 100%; width: 8%; height: 0; border-left: 0px solid transparent; border-right: 60px solid transparent; border-top: 40px solid #5D130F;"></div>
+            <div class="page__req__main__content text-center relative">
+              <h5
+                class="text-4xl lg:text-8xl xl:text-8xl text-white mb-10 font-bold italic slide-in-from-bottom"
+              >
+                DETERMINED TO DREAM<br />DRIVEN TO DELIVER
+              </h5>
+
+              <!-- <img
+                class="page__overlap__body__content__img absolute left-1/2 transform -translate-x-1/2 top-full w-full max-w-screen-lg z-10"
+                src="img/image-4.png"
+              /> -->
+              <div class="animation-container">
+              <div class="page__overlap__body__content__img absolute left-1/2 transform -translate-x-1/2 top-full w-full max-w-screen-lg z-10 helicopter">
+                <img src="img/image-4.png" alt="Helicopter Image">
               </div>
 
+
+              <div
+                class="ellipse-shadow bottom-[-220px] lg:bottom-[-348px] xl:bottom-[-348px]"
+              ></div>
+            </div>
+            </div>
+            <div
+              class="footer__content__about__social__icons absolute bottom-0 right-0 p-6"
+            >
+              <span>
+                <img class="element" src="img/facebookk.svg" />
+              </span>
+              <span>
+                <img class="element" src="img/linkdin.svg" />
+              </span>
+              <span>
+                <img class="element" src="img/insta.svg" />
+              </span>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-
-            </section>
-            
-        <section class="page__aerospace__container mt-20 mb-40">
-            <div class="flex justify-end  p-6 space-x-4 ">
-                <!-- Card 1 -->
-                <!-- <div class="w-395 h-570 relative ml-4 p-6 bg-red-700 text-white items-center justify-center">
-                    
-                   
-                    
-                       
-                        <h4 class="text-2xl font-bold mb-3 italic">OUR INDUSTRIES</h4>
-                        <h3 class="text-4xl font-semibold mb-8">Get Discount next <br/> aerocraft products</h3>
-                        
-                       
-                        <p class="mb-4">
-                            Non augue egestas, commodo velit eget,<br/>
-                            vestibulum tellus. Curabitur<br />vulputate
-                            justo elit, at elementum orci<br/> pulvinar
-                            vel. Pellentesque habitant<br />morbi
-                            tristique. Pellentesque habitant <br/>morbi
-                            tristique. Ut non augue egestas,<br />commodo
-                            velit eget, vestibulum tellus.
-                        </p>
-                        
-                       
-                        <button class="bg-white text-red-700 px-4 py-2 rounded-full">View All</button>
-                    
-                </div> -->
-        
-              <!-- Card 2 -->
-            <div class="card w-395 h-570 relative ml-4 group">
-                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-blue-800 opacity-80 group-hover:hidden"></div>
-                
-                <img class="" src="img/c-1.png" />
-                <!-- Arrow Icon -->
-                <div class="absolute top-4 right-4 rounded-full bg-white p-2">
-                    
-                    <img
-                    src="img/arrow-right.svg" width="35" height="35"
+      <section class="page__booknow">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-[#E7E7E7]">
+          <!-- Left Section -->
+          <div
+            class="flex flex-col justify-center md:ml-40 lg: ml-20 lg:mr-20 sm:ml-20 sm:mr-20 left-section"
+          >
+            <h2
+              class="text-2xl font-bold mb-5 text-[#2a4c95] italic font-montserrat slide-in-from-left"
+            >
+              GET TO KNOW US
+            </h2>
+            <h5
+              class="text-7xl font-bold mb-5 text-[#2a4c95] font-montserrat line-height-[1.2] fade-in"
+            >
+              Our jetly save your time<br />and give you comfort in<br />flights
+            </h5>
+            <p class="font-montserrat text-[#2a4c95] line-height-[1.2] mb-2 delayed-fade-in">
+              Non augue egestas, commodo velit eget, vestibulum tellus.
+              Curabitur<br />vulputate justo elit, at elementum orci pulvinar
+              vel. Pellentesque habitant morbi<br />
+              tristique. Pellentesque habitant morbi tristique. Ut non augue
+              egestas,<br />commodo velit eget, vestibulum tellus.
+            </p>
+            <div class="flex items-center mt-5 delayed-fade-in-2">
+              <img class="mr-2" src="img/check.svg" />
+              <p class="text-[#2a4c95] font-bold mt-2 mb-2">
+                There are many variations of passage of lorem.
+              </p>
+            </div>
+            <div class="flex items-center delayed-fade-in-3">
+              <img class="mr-2" src="img/check.svg" />
+              <p class="text-[#2a4c95] font-bold mt-2 mb-2">
+                There are many variations of passage of lorem.
+              </p>
+            </div>
+            <div class="flex items-center mt-8">
+              <a href=""
+                ><button
+                  class="py-5 px-10 mr-5 bg-[#2a4c95] rounded-full text-white"
+                >
+                  BOOK NOW
+                </button></a
+              >
+              <!-- <div class="rounded-lg overflow-hidden flex items-center justify-center   " style=" border-color: #2a4c95; border-radius: 36.102px;">
+                       <img src="img/phone-booknow.png" class="w-[27px] h-[27px] " />
+                    </div>  -->
+              <div
+                class="rounded-full overflow-hidden flex items-center justify-center border-2 border-[#2a4c95]"
+                style="width: 54px; height: 54px"
+              >
+                <img
+                  src="img/phone-booknow.png"
+                  class="w-[27px] h-[27px]"
+                  alt="Phone Icon"
                 />
-                </div>
-                
-                <!-- Text on mouseover -->
-                <div class="absolute inset-0 flex  justify-start items-end left-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity">
-                    <p class="text-2xl font-montserrat font-bold">Aerospace <br/>Facility</p>
-                </div>
+              </div>
+              <div class="flex flex-col ml-4">
+                <p class="text-[#2a4c95] mr-2">Call Anytime</p>
+                <p class="text-[#2a4c95] font-bold">+92 ( 8800 ) - 6780</p>
+              </div>
             </div>
-    
-            <!-- Card 3 -->
-            <div class="card w-395 h-570 relative ml-4 group">
-                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-blue-800 opacity-80 group-hover:hidden"></div>
-                
-                <img class="" src="img/c-2.png" />
-                 <!-- Arrow Icon -->
-                 <div class="absolute top-4 right-4 rounded-full bg-white p-2">
-                    
-                    <img
-                    src="img/arrow-right.svg" width="35" height="35"
-                />
+          </div>
+
+          <!-- Right Section -->
+          <div class="flex justify-center right-section">
+            <div style="position: relative">
+              <img
+                src="img/pexels-nicolas-petremann-3121030 1.png"
+                class="w-[80%] sm:w-full h-auto"
+                alt="Your Image"
+              />
+              <div  class="absolute bottom-[60px] right-[38px] sm:right-[-60px]">
+                <div
+                  style="padding: 10px; overflow: hidden"
+                  class="bg-red-600 text-white w-96 h-24 lg:block sm:hidden md:blockhidden"
+                >
+                  <p class="text-3xl font-bold font-montserrat">8000+</p>
+                  <p class="font-montserrat text-lg font-bold">
+                    Satisfied Clients
+                  </p>
                 </div>
-                
-                <!-- Text on mouseover -->
-                <div class="absolute inset-0 flex  justify-start items-end left-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity">
-                    <p class="text-2xl font-montserrat font-bold">Aerospace <br/>Facility</p>
-                </div>
+                <div
+                  class="lg:block sm:hidden md:hidden float-right"
+                  style="
+                    width: 8%;
+                    height: 0;
+                    border-left: 0px solid transparent;
+                    border-right: 60px solid transparent;
+                    border-top: 40px solid #5d130f;
+                  "
+                ></div>
+              </div>
             </div>
-    
-            <!-- Card 4 -->
-            <div class="card w-395 h-570 relative ml-4 flex-shrink-2 group">
-                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-blue-800 opacity-80 group-hover:hidden"></div>
-               
-                <img class="" src="img/c-3.png" />
-                 <!-- Arrow Icon -->
-                 <div class="absolute top-4 right-4 rounded-full bg-white p-2">
-                    
-                    <img
-                    src="img/arrow-right.svg" width="35" height="35"
-                />
-                </div>
-                
-                <!-- Text on mouseover -->
-                <div class="absolute inset-0 flex  justify-start items-end left-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity">
-                    <p class="text-2xl font-montserrat font-bold">Aerospace <br/>Facility</p>
-            </div>
-               
-            </div>
-       
-            </section>
-            <section class="page_get_to_know">
-                <div class="flex min-h-screen justify-center bg-[#2a4c95] gap-8 relative w-full h-auto" >
-                    <img src="img/get-flight-shape-1.png.png" alt="" class=" absolute top-0 left-0 w-fit h-auto flex justify-start">
-
-                    <div class=" flex flex-col sm:flex-row md:flex-row relative">
-                        <!-- Form Section (Left Side) -->
-                        <div class="w-full md:w-2/3 lg:w-1/2 xl:w-2/3 p-8 rounded-lg shadow-lg relative items-center ">
-                            <div class="page__gettoknow__form flex flex-col  mt-40 ">
-                                <h3 class="text-3xl font-bold  text-white font-montserrat italic">GET YOUR PRODUCT</h3>
-                                <h1 class="text-6xl font-bold text-white font-montserrat">Request for Defence <br/> Product</h1>
-            
-                                <!-- Input Row 1 -->
-                                <div class="flex flex-col sm:flex-row ">
-                                    <input
-                                        type="text"
-                                        class="flex-1 p-3 border border-gray-300 rounded-md   md:mb-0 md:mr-4"
-                                        placeholder="Name"
-                                    />
-                                    <input
-                                        type="text"
-                                        class="flex-1 p-3 border border-gray-300 rounded-md  "
-                                        placeholder="Email Address"
-                                    />
-                                </div>
-            
-                                <!-- Input Row 2 -->
-                                <div class="flex flex-col sm:flex-row ">
-                                    <input
-                                        type="text"
-                                        class="flex-1 p-3 border border-gray-300 rounded-md md:mb-0 md:mr-4"
-                                        placeholder="Phone Number"
-                                    />
-                                    <input
-                                        type="text"
-                                        class="flex-1 p-3 border border-gray-300 rounded-md"
-                                        placeholder="Select Products"
-                                    />
-                                </div>
-            
-                                <!-- Input Row 3 -->
-                                <div class="flex flex-col  sm:flex-row ">
-                                    <input
-                                        type="text"
-                                        class="flex-1 p-3 border border-gray-300 rounded-md  md:mb-0 md:mr-4"
-                                        placeholder="Select Country"
-                                    />
-                                    <a href="">
-                                        <button class="flex py-5 px-10 bg-white rounded-full text-[#2a4c95] font-bold ">BOOK NOW</button>
-                                    </a>
-                                </div>
-            
-                                <p class="text-white text-sm">
-                                    *After sending request. We’ll contact you for more details about charter.
-                                </p>
-                            </div>
-                        </div>
-            
-                        <!-- Image Section (Right Side) -->
-                        <div class=" w-full md:flex md:w-1/3 lg:w-1/2 xl:w-2/3">
-                            <img
-                                src="img/Group-9.png"
-                                alt="Your Image"
-                                class=" h-auto object-cover rounded-lg flex-shrink-0 w-full h-auto"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            
-            <section class="page__client__feedback">
-                <div class="page__client__feedback__heading">
-                    <div class="page__client__feedback__heading1"><p>
-                        CLIENT FEEDBACK
-                    </p></div>
-                    <div class="page__client__feedback__heading2">
-                        <p>What they’re talking about<br />our flight
-                            services</p>
-                    </div>
-                </div>
-                <div class="flex xl:flex-row lg:flex-row md:flex-col sm:flex-col page__client__feedback__testimonial">
-                    <div class="div-testimonial-one-2">
-                        <div class="overlap-group-3">
-                            <img
-                                class="testimonial-jpg"
-                                src="img/testimonial-1.png"
-                            />
-                            <div class="span-icon-quote">
-                                <div class="symbol-3"></div>
-                            </div>
-                        </div>
-                        <div class="testimonial-content">
-                            <p class="there-are-many">
-                                There are many variations of
-                                passage<br />of available but the
-                                majority have<br />suffered
-                                alteration in some form by<br />injected
-                                humor or randomed.
-                            </p>
-                            <div class="d-flex">
-                            <div class="symbol-4">
-                                &#9733;&#9733;&#9733;&#9733;&#9733;
-                            </div>
-                            <div class="overlap-7">
-                                <div class="heading-bonnie">Bonnie tolbet
-                                </div>
-                                <div class="customer">CUSTOMER</div>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-
-                    <div class="div-testimonial-one-2 flex mt-2">
-                        <div class="overlap-group-3">
-                            <img
-                                class="testimonial-jpg"
-                                src="img/testimonial-2.png"
-                            />
-                            <div class="span-icon-quote">
-                                <div class="symbol-3"></div>
-                            </div>
-                        </div>
-                        <div class="testimonial-content">
-                            <p class="there-are-many">
-                                There are many variations of
-                                passage<br />of available but the
-                                majority have<br />suffered
-                                alteration in some form by<br />injected
-                                humor or randomed.
-                            </p>
-                            <div class="d-flex">
-                            <div class="symbol-4">
-                                &#9733;&#9733;&#9733;&#9733;&#9733;
-                            </div>
-                            <div class="overlap-7">
-                                <div class="heading-bonnie">Sarah albert
-                                </div>
-                                <div class="customer">CUSTOMER</div>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-
-            <section class="page__ourclients">
-                
-
-                <div class="parent__div__client bg-white w-full h-full mt-20 mb-10">
-
-        
-                    <div class="page__client__content mt-5">
-            
-                        <h2 class="text-[#2a4c95] text-center text-5xl font-bold"> Our Clients</h2>
-                        <div class=" w-206 h-66 page__client__list flex xl:flex-row lg:flex-row  md:flex-col sm:flex-col justify-evenly items-center mt-5  ">
-            
-                            <img class="" src="img/google-2015 1.svg"/>
-                            <img class="" src="img/netflix-3 1.svg" alt="">
-                            <img class=""  src="img/airbnb 1.svg" alt="">
-                            <img class="" src="img/amazon-2 (1) 1.svg" alt="">
-                            <img class="" src="img/facebook.svg" alt="">
-                            <img class="" src="img/grab-logo.svg" alt="">
-            
-                        </div>
-            
-                    </div>
-            
-                </div>
-                
-
-
-            </section>
-            <section class="page__products mb-40">
-                
-            
-    <div class="relative bg-white bg-opacity-10 py-16 h-full w-full  overflow-hidden">
-        <!-- Background Shapes -->
-        <div class="absolute top-0 left-0 right-[400px] bottom-0 w-[1132px] h-[700px] bg-red-100 rounded-tl-[2px] rounded-tr-[404.294px]"></div>
-        <div class="absolute bottom-0  right-[125px] top-[95px] rounded-b-full">
-            <img
-            class=""
-            src="img/Ellipse-13.png" />
+          </div>
         </div>
-      
-        <!-- Container -->
-        <div class="container mx-auto relative z-10">
-          <!-- Heading Titles -->
-          <h3 class=" text-3xl font-semibold text-[#2a4c95] mb-5 mt-[60px]">OUR PRODUCTS</h3>
-          <h1 class="text-5xl font-bold text-[#2a4c95] mb-8">Our Latest Products &amp;<br />Innovations</h1>
-      
-          <!-- Product Cards -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-[325px] mx-20 my-40  " >
+      </section>
 
-            <!-- Card 1 -->
-            <div class="bg-white p-6 rounded-md shadow-md relative card active" style="width: 311px; height: 194px; border-radius: 10.107px;">
+      <section class="">
 
-                 <!-- Left Arrow Icon -->
-  <!-- <div class="absolute top-1/2 left-2 transform -translate-y-1/2 arrow" onclick="showPrevCard()">
+        <div class="slider relative  group p-10 flex justify-between gap-8 ">
+
+
+  
+
+          <!-- Card 1 -->
+          <div class="w-[195px] h-[370px]  sm:w-[395px] sm:h-[570px] mr-5">
+            <!-- Image with Linear Gradient Overlay -->
+            <div class="relative w-full h-full  ">
+             <div class="w-full h-full ml-4 p-5 bg-red-700 text-white flex flex-col my-auto justify-evenly ">
+                 <h4 class="text-2xl font-bold italic mt-10 slide-in-from-bottom ">OUR INDUSTRIES</h4>
+                 <h3 class="text-4xl font-semibold mb-5 mt-2 slide-in-from-left">
+                   Get Discount next <br />
+                   aerocraft products
+                 </h3>  
+                 <p class="mb-5 fade-in">
+                     Non augue egestas, commodo velit eget,
+                     vestibulum tellus. Curabiturvulputate justo elit, at
+                     elementum orci
+                     pulvinar vel. Pellentesque habitantmorbi tristique.
+                     Pellentesque habitant morbi tristique. Ut non augue
+                     egestas,commodo velit eget, vestibulum tellus.
+                   </p>
+                   <button
+                       class="bg-white text-red-700 rounded-full w-fit font-bold px-20 py-8 delayed-fade-in"
+                     >
+                       View All
+                     </button>
+             </div>
+         
+             <!-- Linear Gradient Overlay -->
+             <!-- <div class="overlay absolute inset-0 bg-gradient-to-b from-transparent to-red-700 opacity-80 group-hover:hidden"></div> -->
+           </div>
+         
+           <!-- Mouseover Text -->
+           <div class="text-container absolute inset-0 flex justify-start items-end left-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+            
+           </div>
+         </div>
+         
+         <!-- Card 2 -->
+         
+         
+         <div class="w-[195px] h-[370px]  sm:w-[395px] sm:h-[570px] mr-5">
+             <!-- Image with Linear Gradient Overlay -->
+             <div class="relative w-full h-full">
+              <img class="w-full h-full" src="img/c-2.png" alt="Image 2">
+          
+              <!-- Linear Gradient Overlay -->
+              <div class="overlay absolute inset-0 bg-gradient-to-b from-transparent to-blue-800 opacity-80 group-hover:hidden"></div>
+            </div>
+          
+            <!-- Mouseover Text -->
+            <div class="text-container absolute inset-0 flex justify-start items-end left-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+              <p class="text-2xl font-montserrat font-bold ">
+                Aerospace <br />Facility
+              </p>
+            </div>
+          </div>
+         
+          <!-- Card 3 -->
+          <div class="w-[195px] h-[370px]  sm:w-[395px] sm:h-[570px] mr-5">
+             <!-- Image with Linear Gradient Overlay -->
+             <div class="relative w-full h-full">
+              <img class="w-full h-full" src="img/c-3.png" alt="Image 2">
+          
+              <!-- Linear Gradient Overlay -->
+              <div class="overlay absolute inset-0 bg-gradient-to-b from-transparent to-blue-800 opacity-80 group-hover:hidden"></div>
+            </div>
+          
+            <!-- Mouseover Text -->
+            <div class="text-container absolute inset-0 flex justify-start items-end left-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+              <p class="text-2xl font-montserrat font-bold ">
+                Aerospace <br />Facility
+              </p>
+            </div>
+          </div>
+         
+          <!-- Card 4 -->
+          <div class="w-[195px] h-[370px]  sm:w-[395px] sm:h-[570px] mr-5">
+             <!-- Image with Linear Gradient Overlay -->
+             <div class="relative w-full h-full">
+              <img class="w-full h-full" src="img/c-1.png" alt="Image 2">
+          
+              <!-- Linear Gradient Overlay -->
+              <div class="overlay absolute inset-0 bg-gradient-to-b from-transparent to-blue-800 opacity-80 group-hover:hidden"></div>
+            </div>
+          
+            <!-- Mouseover Text -->
+            <div class="text-container absolute inset-0 flex justify-start items-end left-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+              <p class="text-2xl font-montserrat font-bold ">
+                Aerospace <br />Facility
+              </p>
+            </div>
+          </div>
+         
+          <!-- Card 5 -->
+          <div class="w-[195px] h-[370px]  sm:w-[395px] sm:h-[570px] mr-5">
+             <!-- Image with Linear Gradient Overlay -->
+             <div class="relative w-full h-full">
+              <img class="w-full h-full" src="img/c-1.png" alt="Image 2">
+          
+              <!-- Linear Gradient Overlay -->
+              <div class="overlay absolute inset-0 bg-gradient-to-b from-transparent to-blue-800 opacity-80 group-hover:hidden"></div>
+            </div>
+          
+            <!-- Mouseover Text -->
+            <div class="text-container absolute inset-0 flex justify-start items-end left-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+              <p class="text-2xl font-montserrat font-bold ">
+                Aerospace <br />Facility
+              </p>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="w-[195px] h-[370px]  sm:w-[395px] sm:h-[570px] mr-5">
+             <!-- Image with Linear Gradient Overlay -->
+             <div class="relative w-full h-full">
+              <img class="w-full h-full" src="img/c-2.png" alt="Image 2">
+          
+              <!-- Linear Gradient Overlay -->
+              <div class="overlay absolute inset-0 bg-gradient-to-b from-transparent to-blue-800 opacity-80 group-hover:hidden"></div>
+            </div>
+          
+            <!-- Mouseover Text -->
+            <div class="text-container absolute inset-0 flex justify-start items-end left-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+              <p class="text-2xl font-montserrat font-bold ">
+                Aerospace <br />Facility
+              </p>
+            </div>
+          </div>
+          <!-- Card 7 -->
+          <div class="w-[195px] h-[370px]  sm:w-[395px] sm:h-[570px] mr-5">
+             <!-- Image with Linear Gradient Overlay -->
+             <div class="relative w-full h-full">
+              <img class="w-full h-full" src="img/c-3.png" alt="Image 2">
+          
+              <!-- Linear Gradient Overlay -->
+              <div class="overlay absolute inset-0 bg-gradient-to-b from-transparent to-blue-800 opacity-80 group-hover:hidden"></div>
+            </div>
+          
+            <!-- Mouseover Text -->
+            <div class="text-container absolute inset-0 flex justify-start items-end left-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+              <p class="text-2xl font-montserrat font-bold ">
+                Aerospace <br />Facility
+              </p>
+            </div>
+          </div>
+          <!-- Card 8 -->
+          <div class="w-[195px] h-[370px]  sm:w-[395px] sm:h-[570px] mr-5">
+             <!-- Image with Linear Gradient Overlay -->
+             <div class="relative w-full h-full">
+              <img class="w-full h-full" src="img/c-1.png" alt="Image 2">
+          
+              <!-- Linear Gradient Overlay -->
+              <div class="overlay absolute inset-0 bg-gradient-to-b from-transparent to-blue-800 opacity-80 group-hover:hidden"></div>
+            </div>
+          
+            <!-- Mouseover Text -->
+            <div class="text-container absolute inset-0 flex justify-start items-end left-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+              <p class="text-2xl font-montserrat font-bold ">
+                Aerospace <br />Facility
+              </p>
+            </div>
+          </div>
+           <!-- <div relative w-full h-full><img class="w-full h-full " src="img/c-1.png" alt="Image 3"></div>
+           <div relative w-full h-full><img class="w-full h-full] " src="img/c-1.png" alt="Image 1"></div>
+           <div relative w-full h-full><img class="w-full h-full " src="img/c-2.png" alt="Image 2"></div>
+           <div relative w-full h-full><img class="w-full h-full " src="img/c-1.png" alt="Image 3"></div>
+           <div relative w-full h-full><img class="w-full h-full " src="img/c-1.png" alt="Image 1"></div>
+           <div relative w-full h-full><img class="w-full h-full " src="img/c-2.png" alt="Image 2"></div>
+           <div relative w-full h-full><img class="w-full h-full " src="img/c-1.png" alt="Image 3"></div> -->
+           <!-- Add more slides as needed -->
+         </div>
+        
+      </section>
+      <section class="page_get_to_know">
+        <div class="flex justify-center bg-[#2a4c95] gap-8 relative w-full">
+          <img
+            src="img/get-flight-shape-1.png.png"
+            alt=""
+            class="absolute top-[25%] sm:top-0 left-0 w-fit h-auto"
+          />
+          <!-- flex-col sm:flex-row md:flex-row relative -->
+          <div class="flex justify-between w-full flex-col-reverse sm:flex-row">
+            <!-- Form Section (Left Side) -->
+            <div
+              class="w-full  p-8 rounded-lg shadow-lg relative flex items-center"
+            >
+              <div class="page__gettoknow__form pt-20  flex  justify-center items-center sm:justify-start sm:items-start flex-col sm:pl-[22rem]">
+                <h3
+                  class="text-3xl font-bold text-white font-montserrat italic slide-in-from-bottom"
+                >
+                  GET YOUR PRODUCT
+                </h3>
+                <h1 class="text-6xl font-bold text-white font-montserrat slide-in-from-leftt">
+                  Request for Defence <br />
+                  Product
+                </h1>
+
+                <!-- Input Row 1 -->
+                <div class="flex flex-col sm:flex-row fade-inn">
+                  <input
+                    type="text"
+                    class="flex-1 p-3 border border-gray-300 rounded-md md:mb-0 md:mr-4 sm:w-[400px]"
+                    placeholder="Name"
+                  />
+                  <input
+                    type="text"
+                    class="flex-1 p-3 border border-gray-300 rounded-md"
+                    placeholder="Email Address"
+                  />
+                </div>
+
+                <!-- Input Row 2 -->
+                <div class="flex flex-col sm:flex-row delayed-fade-inn">
+                  <input
+                    type="text"
+                    class="flex-1 p-3 border border-gray-300 rounded-md md:mb-0 md:mr-4 sm:w-[400px]"
+                    placeholder="Phone Number"
+                  />
+                  <input
+                    type="text"
+                    class="flex-1 p-3 border border-gray-300 rounded-md"
+                    placeholder="Select Products"
+                  />
+                </div>
+
+                <!-- Input Row 3 -->
+                <div class="flex flex-col sm:flex-row delayed-fade-inn-2">
+                  <input
+                    type="text"
+                    class="flex-1 p-3 border border-gray-300 rounded-md md:mb-0 md:mr-4 sm:w-[295px]"
+                    placeholder="Select Country"
+                  />
+                  <a href="">
+                    <button
+                      class="flex py-5 px-10 bg-white rounded-full text-[#2a4c95] font-bold"
+                    >
+                      BOOK NOW
+                    </button>
+                  </a>
+                </div>
+
+                <p class="text-white text-sm">
+                  *After sending request. We’ll contact you for more details
+                  about charter.
+                </p>
+              </div>
+            </div>
+
+            <!-- Image Section (Right Side) -->
+            <div class="">
+              <img
+                src="img/Group-9.png"
+                alt="Your Image"
+                class="h-auto object-cover rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page__client__feedback">
+        <div class="page__client__feedback__heading">
+          <div class="page__client__feedback__heading1 slide-in-from-bottom">
+            <p class="">CLIENT FEEDBACK</p>
+          </div>
+          <div class="page__client__feedback__heading2 slide-in-from-bottom1">
+            <p>What they’re talking about<br />our flight services</p>
+          </div>
+        </div>
+
+        <!-- xl:flex-row lg:flex-row md:flex-col sm:flex-col -->
+        <div
+          class="flex flex-col md:flex-row page__client__feedback__testimonial slide-in-from-bottom2"
+        >
+          <div class="div-testimonial-one-2 left-section ">
+            <div class="overlap-group-3">
+              <img class="testimonial-jpg" src="img/testimonial-1.png" />
+              <div class="span-icon-quote">
+                <div class="symbol-3"></div>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <p class="there-are-many">
+                There are many variations of passage<br />of available but the
+                majority have<br />suffered alteration in some form by<br />injected
+                humor or randomed.
+              </p>
+              <div class="d-flex">
+                <div class="symbol-4">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div class="overlap-7">
+                  <div class="heading-bonnie">Bonnie tolbet</div>
+                  <div class="customer">CUSTOMER</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="div-testimonial-one-2 flex mt-2 right-section">
+            <div class="overlap-group-3">
+              <img class="testimonial-jpg" src="img/testimonial-2.png" />
+              <div class="span-icon-quote">
+                <div class="symbol-3"></div>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <p class="there-are-many">
+                There are many variations of passage<br />of available but the
+                majority have<br />suffered alteration in some form by<br />injected
+                humor or randomed.
+              </p>
+              <div class="d-flex">
+                <div class="symbol-4">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div class="overlap-7">
+                  <div class="heading-bonnie">Sarah albert</div>
+                  <div class="customer">CUSTOMER</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page__ourclients">
+        <div class="parent__div__client bg-white w-full h-full mt-20 mb-10">
+          <div class="page__client__content mt-5">
+            <h2 class="text-[#2a4c95] text-center text-5xl font-bold">
+              Our Clients
+            </h2>
+            <div
+              class="page__client__list flex flex-col sm:flex-row justify-evenly items-center my-5"
+            >
+              <img class="my-5 sm:m-0" src="img/google-2015 1.svg" />
+              <img class="my-5 sm:m-0" src="img/netflix-3 1.svg" alt="" />
+              <img class="my-5 sm:m-0" src="img/airbnb 1.svg" alt="" />
+              <img class="my-5 sm:m-0" src="img/amazon-2 (1) 1.svg" alt="" />
+              <img class="my-5 sm:m-0" src="img/facebook.svg" alt="" />
+              <img class="my-5 sm:m-0" src="img/grab-logo.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page__products mb-40">
+        <div
+          class="relative bg-white bg-opacity-10 py-16 h-full w-full overflow-hidden"
+        >
+          <!-- Background Shapes -->
+          <div
+            class="absolute top-0 left-0 w-[80%] h-full bg-red-100 rounded-tl-[2px] rounded-tr-[404.294px]"
+          ></div>
+          <div
+            class="absolute bottom-0 right-[125px] top-[95px] rounded-b-full"
+          >
+            <img class="" src="img/Ellipse-13.png" />
+          </div>
+
+          <!-- Container -->
+          <div class="container mx-auto relative z-10">
+            <!-- Heading Titles -->
+            <h3 class="text-3xl font-semibold text-[#2a4c95] mb-5 mt-[60px]">
+              OUR PRODUCTS
+            </h3>
+            <h1 class="text-5xl font-bold text-[#2a4c95] mb-8">
+              Our Latest Products &amp;<br />Innovations
+            </h1>
+            <div class="slider-container">
+            <!-- Product Cards -->
+            <div
+              class=" product-slider  gap-[325px] mx-20 my-40 w-full h-full "
+            >
+            
+              <!-- Card 1 -->
+              <div
+             
+              class="bg-white p-10 sm:p-6 rounded-md shadow-md relative card active mr-8"
+                style="width: 311px; height: 194px; border-radius: 10.107px"
+              >
+                <!-- Left Arrow Icon -->
+                <!-- <div class="absolute top-1/2 left-2 transform -translate-y-1/2 arrow" onclick="showPrevCard()">
     <i class="icon" data-feather="chevron-left"></i>
   </div> -->
 
-  <!-- Right Arrow Icon -->
-  <!-- <div class="absolute top-1/2 right-2 transform -translate-y-1/2 arrow" onclick="showNextCard()">
+                <!-- Right Arrow Icon -->
+                <!-- <div class="absolute top-1/2 right-2 transform -translate-y-1/2 arrow" onclick="showNextCard()">
     <i class="icon" data-feather="chevron-right"></i>
   </div> -->
-              <!-- Card Content -->
-              <!-- Replace this with your actual content -->
-              <!-- <img
+                <!-- Card Content -->
+                <!-- Replace this with your actual content -->
+                <!-- <img
                     class="w-[30.322px]
                     h-[30.322px] mb-2"
                     src="img/website-4943 1.svg"
                 /> -->
-                <div class=" mb-2 inline-block w-[52px] h-[48px] rounded-lg overflow-hidden bg-rose-200 flex items-center justify-center" style="border-radius: 10.107px;">
-                    <img
+                <div
+                  class="mb-2 inline-block w-[52px] h-[48px] rounded-lg overflow-hidden bg-rose-200 flex items-center justify-center"
+                  style="border-radius: 10.107px"
+                >
+                  <img
                     class=""
                     src="img/website-4943 1.svg"
-                    style="width: 30.322px; height: 30.322px;"
+                    style="width: 30.322px; height: 30.322px"
                     alt="Your Image"
                   />
-</div>
-                
-              <p class="mb-2 font-bold">AEROSPACE</p>
-              <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-            </div>
-      
-            <!-- Repeat similar structure for Card 2 to Card 5 -->
-      
-            <!-- Card 2 -->
-            <div class="bg-white p-6 rounded-md shadow-md relative card " style="width: 311px; height: 194px; border-radius: 10.107px;">
+                </div>
+
+                <p class="mb-2 font-bold">AEROSPACE</p>
+                <p>
+                  Lorem Ipsum has been the industry's standard dummy text ever
+                  since the 1500s.
+                </p>
+              </div>
+
+              <!-- Repeat similar structure for Card 2 to Card 5 -->
+
+              <!-- Card 2 -->
+              <div
+                class="bg-white p-6 rounded-md shadow-md relative card mr-8"
+                style="width: 311px; height: 194px; border-radius: 10.107px"
+              >
                 <!-- Card Content -->
                 <!-- Replace this with your actual content -->
                 <!-- <img
@@ -511,30 +916,39 @@
                       h-[30.322px] mb-2"
                       src="img/website-4943 1.svg"
                   /> -->
-                   <!-- Left Arrow Icon -->
-  <!-- <div class="absolute top-1/2 left-2 transform -translate-y-1/2 arrow" onclick="showPrevCard()">
+                <!-- Left Arrow Icon -->
+                <!-- <div class="absolute top-1/2 left-2 transform -translate-y-1/2 arrow" onclick="showPrevCard()">
     <i class="icon" data-feather="chevron-left"></i>
   </div> -->
 
-  <!-- Right Arrow Icon -->
-  <!-- <div class="absolute top-1/2 right-2 transform -translate-y-1/2 arrow" onclick="showNextCard()">
+                <!-- Right Arrow Icon -->
+                <!-- <div class="absolute top-1/2 right-2 transform -translate-y-1/2 arrow" onclick="showNextCard()">
     <i class="icon" data-feather="chevron-right"></i>
   </div> -->
-                  <div class=" mb-2 inline-block w-[52px] h-[48px] rounded-lg overflow-hidden bg-rose-200 flex items-center justify-center" style="border-radius: 10.107px;">
-                      <img
-                      class=""
-                      src="img/website-4943 1.svg"
-                      style="width: 30.322px; height: 30.322px;"
-                      alt="Your Image"
-                    />
-  </div>
-                  
+                <div
+                  class="mb-2 inline-block w-[52px] h-[48px] rounded-lg overflow-hidden bg-rose-200 flex items-center justify-center"
+                  style="border-radius: 10.107px"
+                >
+                  <img
+                    class=""
+                    src="img/website-4943 1.svg"
+                    style="width: 30.322px; height: 30.322px"
+                    alt="Your Image"
+                  />
+                </div>
+
                 <p class="mb-2 font-bold">AEROSPACE</p>
-                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                <p>
+                  Lorem Ipsum has been the industry's standard dummy text ever
+                  since the 1500s.
+                </p>
               </div>
 
-               <!-- Card 3 -->
-            <div class="bg-white p-6 rounded-md shadow-md " style="width: 311px; height: 194px; border-radius: 10.107px;">
+              <!-- Card 3 -->
+              <div
+                class="bg-white p-6 rounded-md shadow-md mr-8"
+                style="width: 311px; height: 194px; border-radius: 10.107px"
+              >
                 <!-- Card Content -->
                 <!-- Replace this with your actual content -->
                 <!-- <img
@@ -542,21 +956,30 @@
                       h-[30.322px] mb-2"
                       src="img/website-4943 1.svg"
                   /> -->
-                  <div class=" mb-2 inline-block w-[52px] h-[48px] rounded-lg overflow-hidden bg-rose-200 flex items-center justify-center" style="border-radius: 10.107px;">
-                      <img
-                      class=""
-                      src="img/website-4943 1.svg"
-                      style="width: 30.322px; height: 30.322px;"
-                      alt="Your Image"
-                    />
-  </div>
-                  
+                <div
+                  class="mb-2 inline-block w-[52px] h-[48px] rounded-lg overflow-hidden bg-rose-200 flex items-center justify-center"
+                  style="border-radius: 10.107px"
+                >
+                  <img
+                    class=""
+                    src="img/website-4943 1.svg"
+                    style="width: 30.322px; height: 30.322px"
+                    alt="Your Image"
+                  />
+                </div>
+
                 <p class="mb-2 font-bold">AEROSPACE</p>
-                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                <p>
+                  Lorem Ipsum has been the industry's standard dummy text ever
+                  since the 1500s.
+                </p>
               </div>
 
-               <!-- Card 4 -->
-            <div class="bg-white p-6 rounded-md shadow-md " style="width: 311px; height: 194px; border-radius: 10.107px;">
+              <!-- Card 4 -->
+              <div
+                class="bg-white p-6 rounded-md shadow-md mr-8"
+                style="width: 311px; height: 194px; border-radius: 10.107px"
+              >
                 <!-- Card Content -->
                 <!-- Replace this with your actual content -->
                 <!-- <img
@@ -564,21 +987,30 @@
                       h-[30.322px] mb-2"
                       src="img/website-4943 1.svg"
                   /> -->
-                  <div class=" mb-2 inline-block w-[52px] h-[48px] rounded-lg overflow-hidden bg-rose-200 flex items-center justify-center" style="border-radius: 10.107px;">
-                      <img
-                      class=""
-                      src="img/website-4943 1.svg"
-                      style="width: 30.322px; height: 30.322px;"
-                      alt="Your Image"
-                    />
-  </div>
-                  
+                <div
+                  class="mb-2 inline-block w-[52px] h-[48px] rounded-lg overflow-hidden bg-rose-200 flex items-center justify-center"
+                  style="border-radius: 10.107px"
+                >
+                  <img
+                    class=""
+                    src="img/website-4943 1.svg"
+                    style="width: 30.322px; height: 30.322px"
+                    alt="Your Image"
+                  />
+                </div>
+
                 <p class="mb-2 font-bold">AEROSPACE</p>
-                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                <p>
+                  Lorem Ipsum has been the industry's standard dummy text ever
+                  since the 1500s.
+                </p>
               </div>
 
-               <!-- Card 5 -->
-            <div class="bg-white p-6 rounded-md shadow-md" style="width: 311px; height: 194px; border-radius: 10.107px;">
+              <!-- Card 5 -->
+              <div
+                class="bg-white p-6 rounded-md shadow-md"
+                style="width: 311px; height: 194px; border-radius: 10.107px"
+              >
                 <!-- Card Content -->
                 <!-- Replace this with your actual content -->
                 <!-- <img
@@ -586,29 +1018,33 @@
                       h-[30.322px] mb-2"
                       src="img/website-4943 1.svg"
                   /> -->
-                  <div class=" mb-2 inline-block w-[52px] h-[48px] rounded-lg overflow-hidden bg-rose-200 flex items-center justify-center" style="border-radius: 10.107px;">
-                      <img
-                      class=""
-                      src="img/website-4943 1.svg"
-                      style="width: 30.322px; height: 30.322px;"
-                      alt="Your Image"
-                    />
-  </div>
-                  
+                <div
+                  class="mb-2 inline-block w-[52px] h-[48px] rounded-lg overflow-hidden bg-rose-200 flex items-center justify-center"
+                  style="border-radius: 10.107px"
+                >
+                  <img
+                    class=""
+                    src="img/website-4943 1.svg"
+                    style="width: 30.322px; height: 30.322px"
+                    alt="Your Image"
+                  />
+                </div>
+
                 <p class="mb-2 font-bold">AEROSPACE</p>
-                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                <p>
+                  Lorem Ipsum has been the industry's standard dummy text ever
+                  since the 1500s.
+                </p>
               </div>
+
+              <!-- ... Repeat for other cards ... -->
             
-            <!-- ... Repeat for other cards ... -->
-      
+            </div>
+            </div>
           </div>
         </div>
-      </div>
-           
-          
-       
-            </section>
-            <!-- <section class="requirements">
+      </section>
+      <!-- <section class="requirements">
              <div class="page__req__section">
                 
                     <div class="frame-req">
@@ -633,299 +1069,497 @@
                
              </div>
             </section> -->
-            <section class="requirements">
-       
-
-                <div class="page__requirements__parent bg-[#2a4c95] w-full h-auto relative">
-                   <img src="img/div.video-one__bg.png" alt="" class="mx-auto">
-                   <div class="page__requirements__content flex w-full h-full justify-center items-center absolute top-0 left-0 ">
-                       <div class="page__req__main__content text-center" >
-                           <img src="img/link.svg" alt=""  class="mx-auto"/>
-                           <h2 class="text-5xl text-white my-10">Share requirements and our<br />experts will
-                               send you a quote</h2>
-                               <a href=""><button class="py-5 px-10 mr-3 bg-red-500 rounded-full text-white">BOOK NOW</button></a>
-                               <a href=""><button class="py-5 px-10 bg-white text-black rounded-full">READ MORE</button></a>
-       
-                       </div>
-                   
-       
-       
-       
-                   </div>
-       
-                </div>
-             
-              </section>
-            <section class="page__discover w-full h-auto mb-40">
-          
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white ">
-        
-       
-<!-- Left Section -->
-<div class="flex flex-col mb-40   relative">
-    
-        <img class="w-full md:w-3/4 lg:w-3/2 h-auto object-cover flex-shrink-0 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-2 m-20 flex-shrink-0 z-0" src="img/image-6.png" />
-    <img class=" p-6 w-full md:w-1/2 lg:w-3/4 relative flex h-auto top-1/2 left-1/2 transform -translate-x-1/4 -translate-y-1/4 z-10 m-20" src="img/image-5.png" />
-    
-    
-</div>
-
-      
-        <!-- Right Section -->
-        <div class="flex  justify-center items-center mt-15  ml-20">
-            <div class="relative m-20 p-10">
-                <p class="text-2xl text-[#D73D35] font-bold mb-2">WHY ENTEC</p>  
-                <p class="text-4xl font-bold text-black mb-8">Experience luxury<br />aerospace
-                    products</p>  
-                    <p class="text-xl text-[#D73D35] font-bold mb-8">There are many variations of passage of
-                        lorem available but the majority alteration.</p>    
-                        <p class="text-[#79817C] font-'DM Sans' mb-8">Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Curabiturcondimentum,
-                            lacus non faucibus congue, lectus quam
-                            viverra<br />nulla, quis egestas neque
-                            sapien ac magna.></p>  
-                            <div class="flex items-center">
-                            <div class="section-list-item-2 ">
-                                <div class="symbol-5"></div>
-                            </div>
-                            <p class="ml-2"> Security Aerospace</p>
-                            <div class="section-list-item-2 ml-4">
-                                <div class="symbol-5"></div>
-                            </div>
-                            <p class="ml-2"> Certified Aerospace</p>
-                        </div> 
-                        <a href=""><button class="py-5 px-5 mr-3 bg-red-500 rounded-full text-white mt-5 font-bold font-montserrat">DISCOVER MORE</button></a>
-
-         
-       
-
+      <section class="requirements">
+        <div class="page__requirements__parent bg-[#2a4c95] w-full h-auto">
+          <div class="relative h-fit">
+            <img
+              src="img/div.video-one__bg.png"
+              alt=""
+              class="mx-auto object-cover"
+            />
+            <div
+              class="page__requirements__content flex w-full h-full justify-center items-center absolute top-0 left-0"
+            >
+              <div class="page__req__main__content text-center w-fit">
+                <img src="img/link.svg" alt="" class="mx-auto" />
+                <h2 class="text-5xl text-white my-10">
+                  Share requirements and our<br />experts will send you a quote
+                </h2>
+                <a href=""
+                  ><button
+                    class="py-5 px-10 mr-3 bg-red-500 rounded-full text-white"
+                  >
+                    BOOK NOW
+                  </button></a
+                >
+                <a href=""
+                  ><button class="py-5 px-10 bg-white text-black rounded-full">
+                    READ MORE
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
+      <section class="page__discover w-full h-auto mb-40 py-36">
+        <div
+          class="flex flex-col sm:flex-row justify-between items-center "
+        >
+          <!-- Left Section -->
+          <div class="w-[50%] flex justify-center left-section">
+            <div
+              class="sm:mb-40 relative w-fit  flex justify-center"
+            >
+              <img class="w-[60%] sm:w-auto" src="img/image-6.png" />
+              <img
+                class="absolute sm:top-64 sm:left-64 top-20 left-52 w-[60%] sm:w-auto"
+                src="img/image-5.png"
+              />
+            </div>
+          </div>
+
+          <!-- Right Section -->
+          <div class="flex justify-center items-center mt-15 ml-20 sm:w-[50%] right-section">
+            <div class="relative m-20 p-10 sm:w-[60%] animate-on-scroll">
+              <p class="text-4xl text-[#D73D35] font-bold mb-2 ">WHY ENTEC</p>
+              <p class="text-6xl font-bold text-green-900 mb-8 ">
+                Experience luxury<br />aerospace products
+              </p>
+              <p class="text-2xl text-[#D73D35] font-bold mb-8 ">
+                There are many variations of passage of lorem available but the
+                majority alteration.
+              </p>
+              <p class="text-2xl text-[#79817C] font-'DM Sans' mb-8 ">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Curabiturcondimentum, lacus non faucibus congue, lectus quam
+                viverra<br />nulla, quis egestas neque sapien ac magna.>
+              </p>
+              <div class="flex items-center ">
+                <div class="section-list-item-2">
+                  <div class="symbol-5"></div>
+                </div>
+                <p class="ml-2">Security Aerospace</p>
+                <div class="section-list-item-2 ml-4">
+                  <div class="symbol-5"></div>
+                </div>
+                <p class="ml-2">Certified Aerospace</p>
+              </div>
+              <a href=""
+                ><button
+                  class="py-5 px-5 mr-3 bg-red-500 rounded-full text-white mt-5 font-bold font-montserrat"
+                >
+                  DISCOVER MORE
+                </button></a
+              >
+            </div>
+          </div>
         </div>
-      </div>
-           
+      </section>
+      <section class="page__locations">
+        <div class="page__requirements__parent bg-[#2a4c95] w-full relative">
+          <img src="img/locations.svg" alt="" class="mx-auto pt-80" />
+          <div
+            class="page__requirements__content flex w-full h-full justify-center absolute top-0 left-0"
+          >
+            <div class="page__req__main__content text-center">
+              <h2 class="text-2xl text-white mt-10 italic">SUPPORT</h2>
 
-            </section>
-            <section class="page__locations">
-                <div class="page__requirements__parent bg-[#2a4c95] w-full relative">
-                    <img src="img/locations.svg" alt="" class="mx-auto pt-80">
-                    <div class="page__requirements__content flex w-full h-full justify-center  absolute top-0 left-0 ">
-                        <div class="page__req__main__content text-center">
-                            <h2 class="text-2xl text-white mt-10 italic">SUPPORT </h2>
-        
-                            <h2 class="text-5xl text-white mt-5 font-bold mb-5">Always available to help across all <br/>
-                                our installation locations</h2>
-                               
-        
-                        </div>
-                    
-        
-        
-        
-                    </div>
-        
-                 </div>
-               
-            </section>
-            <section class="page__blog">
-                <div class="container mx-auto mt-10 p-4">
-
-                    <!-- Headings -->
-                    <h4 class="text-2xl text-[#2a4c95] mb-2 flex justify-center italic font-bold">BLOG &amp; NEWS</h4>
-                    <h2 class="text-5xl text-[#2a4c95] font-semibold mb-28 flex justify-center font-bold">Our Latest Blog &amp; News</h2>
-                  
-                    <!-- Centered Image Cards -->
-                    <div class="flex justify-center">
-                      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      
-                        <!-- Card 1 -->
-                        <div class="bg-white p-4 shadow-md relative">
-                            <div class="absolute top-[-14px] left-12 bg-red-500 px-6 py-4">
-                                <p class="text-white text-5xl font-semibold">25 </p>
-                                <p class="text-white text-2xl ">AUG</p>
-                              </div>
-                          <img class="w-full h-64 object-cover mb-4" src="img/rectangle-2.png" alt="Image 1">
-                          <a href=""><button class="py-1 px-5 mr-3 bg-red-500 rounded-full text-white">aircraft</button></a>
-        
-                          <p class="text-xl font-montserrat text-black mt-4 font-bold"> Quick and Easy Flaky Pastry for Tasty <br/>
-                            Breakfast</p>
-                            <a href=""><h3 class="text-red-500 text-lg font-bold mt-4">READ MORE</h3></a>
-                        </div>
-                  
-                        <!-- Card 2 -->
-                        <div class="bg-white p-4 shadow-md relative">
-                            <div class="absolute top-[-14px] left-12 bg-white px-6 py-4">
-                                <p class="text-black text-5xl font-semibold">25 </p>
-                                <p class="text-black text-2xl">AUG</p>
-                              </div>
-                          <img class="w-full h-64 object-cover mb-4" src="img/blog-img-2.png" alt="Image 2">
-                          <a href=""><button class="py-1 px-5 mr-3 bg-white rounded-full text-red-500 border  border-red-500 ">aircraft</button></a>
-        
-                          <p class="text-xl font-montserrat text-black mt-4 font-bold"> Quick and Easy Flaky Pastry for Tasty <br/>
-                            Breakfast</p>
-                            <a href=""><h3 class="text-red-500 text-lg font-bold mt-4">READ MORE</h3></a>
-                        </div>
-                  
-                        <!-- Card 3 -->
-                        <div class="bg-white p-4 shadow-md relative">
-                            <div class="absolute top-[-14px] left-12 bg-white px-6 py-4">
-                                <p class="text-black text-5xl font-semibold">25 </p>
-                                <p class="text-black text-2xl font-bold">AUG</p>
-                              </div>
-                          <img class="w-full h-64 object-cover mb-4" src="img/rectangle-2.png" alt="Image 3">
-                          <a href=""><button class="py-1 px-5 mr-3 bg-white rounded-full text-red-500 border  border-red-500 ">aircraft</button></a>
-        
-                          <p class="text-xl text-black mt-4 font-bold"> Quick and Easy Flaky Pastry for Tasty <br/>
-                            Breakfast</p>
-                            <a href=""><h3 class="text-red-500 text-lg font-bold mt-4">READ MORE</h3></a>
-                        </div>
-                  
-                      </div>
-                    </div>
-                  </div>
-                  
-        
-            </section>
-            <section class="footer">
-                <div class="footer__content">
-                    <div class="footer__content__text">
-                        <p>
-                            Producers of Metallic parts & <br />
-                            global aerospace defence majors
-                        </p>
-                    </div>
-                </div>
-                <div class="footer__content">
-                    <div class="footer__content__newsletter">
-                        <div class="footer__content__newsletter__title">
-                            <p>
-                                Join our newsletter to <br />
-                                keep up to date with us
-                            </p>
-                        </div>
-                        <div class="footer__content__newsletter__form">
-                            <img src="img/user.svg"/>
-                            <input type="text" placeholder="Enter your email" />
-                            <button><p>Subscribe</p></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="divider"></div>
-                <div class="footer__content">
-                    <div class="footer__content__about">
-                        <div class="footer__content__about__social">
-                            <div class="footer__content__about__social__logo">
-                                <img src="img/logo.svg" />
-                                <span
-                                    >We growing up your aerospace <br />
-                                    managed componies</span
-                                >
-                            </div>
-                            <div class="footer__content__about__social__icons">
-                                <span>
-                                    <img
-                                        class="element"
-                                        src="img/facebookk.svg"
-                                    />
-                                </span>
-                                <span>
-                                    <img
-                                        class="element"
-                                        src="img/linkdin.svg"
-                                    />
-                                </span>
-                                <span>
-                                    <img
-                                        class="element"
-                                        src="img/insta.svg"
-                                    />
-                                </span>
-                            </div>
-                        </div>
-                        <div class="footer__content__about__link">
-                            <div class="footer__content__about__link__row">
-                                <a href="">Platform</a>
-                                <a href="">About</a>
-                                <a href="">Productes</a>
-                                <a href="">Services</a>
-                            </div>
-                            <div class="footer__content__about__link__row">
-                                <a href="">Company</a>
-                                <a href="">Blog</a>
-                                <a href="">Careers</a>
-                                <a href="">News</a>
-                               
-                            </div>
-                            <div class="footer__content__about__link__row">
-                                <a href="">Resources</a>
-                                <a href="">Documentation</a>
-                                <a href="">Papers</a>
-                                <a href="">Press Conveferences</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="divider"></div>
-                <div class="footer__content">
-                    <div class="footer__content__privacy">
-                        <div class="footer__content__privacy__year">
-                            <span>@2024 Entek INC</span>
-                        </div>
-                        <div class="footer__content__privacy__links">
-                            <a href="">Terms of Service</a>
-                            <a href="">Privacy Policy</a>
-                            <a href="">Cookies</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <style>
-                .card {
-                    position: relative;
-                    overflow: hidden;
-                }
-            </style>
+              <h2 class="text-5xl text-white mt-5 font-bold mb-5">
+                Always available to help across all <br />
+                our installation locations
+              </h2>
+            </div>
+          </div>
         </div>
+      </section>
+      <section class="page__blog">
+        <div class="container mx-auto mt-10 p-4">
+          <!-- Headings -->
+          <h4
+            class="text-2xl text-[#2a4c95] mb-2 flex justify-center italic font-bold"
+          >
+            BLOG &amp; NEWS
+          </h4>
+          <h2
+            class="text-5xl text-[#2a4c95] font-semibold mb-28 flex justify-center font-bold"
+          >
+            Our Latest Blog &amp; News
+          </h2>
 
-        <script>
-            function toggleMenu() {
-                var menuList = document.getElementById("menu-list");
-               menuList.style.display = (menuList.style.display === 'flex' ? '' : 'flex');
+          <!-- Centered Image Cards -->
+          <div class="flex justify-center">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 page_blog_cards animate-on-scroll ">
+              <!-- Card 1 -->
+              <div class="bg-white p-4 shadow-md relative">
+                <div class="absolute top-[-14px] left-12 bg-red-500 px-6 py-4">
+                  <p class="text-white text-5xl font-semibold">25</p>
+                  <p class="text-white text-2xl">AUG</p>
+                </div>
+                <img
+                  class="w-full h-64 object-cover mb-4"
+                  src="img/rectangle-2.png"
+                  alt="Image 1"
+                />
+                <a href=""
+                  ><button
+                    class="py-1 px-5 mr-3 bg-red-500 rounded-full text-white"
+                  >
+                    aircraft
+                  </button></a
+                >
+
+                <p class="text-xl font-montserrat text-black mt-4 font-bold">
+                  Quick and Easy Flaky Pastry for Tasty <br />
+                  Breakfast
+                </p>
+                <a href=""
+                  ><h3 class="text-red-500 text-lg font-bold mt-4">
+                    READ MORE
+                  </h3></a
+                >
+              </div>
+
+              <!-- Card 2 -->
+              <div class="bg-white p-4 shadow-md relative">
+                <div class="absolute top-[-14px] left-12 bg-white px-6 py-4">
+                  <p class="text-black text-5xl font-semibold">25</p>
+                  <p class="text-black text-2xl">AUG</p>
+                </div>
+                <img
+                  class="w-full h-64 object-cover mb-4"
+                  src="img/blog-img-2.png"
+                  alt="Image 2"
+                />
+                <a href=""
+                  ><button
+                    class="py-1 px-5 mr-3 bg-white rounded-full text-red-500 border border-red-500"
+                  >
+                    aircraft
+                  </button></a
+                >
+
+                <p class="text-xl font-montserrat text-black mt-4 font-bold">
+                  Quick and Easy Flaky Pastry for Tasty <br />
+                  Breakfast
+                </p>
+                <a href=""
+                  ><h3 class="text-red-500 text-lg font-bold mt-4">
+                    READ MORE
+                  </h3></a
+                >
+              </div>
+
+              <!-- Card 3 -->
+              <div class="bg-white p-4 shadow-md relative">
+                <div class="absolute top-[-14px] left-12 bg-white px-6 py-4">
+                  <p class="text-black text-5xl font-semibold">25</p>
+                  <p class="text-black text-2xl font-bold">AUG</p>
+                </div>
+                <img
+                  class="w-full h-64 object-cover mb-4"
+                  src="img/rectangle-2.png"
+                  alt="Image 3"
+                />
+                <a href=""
+                  ><button
+                    class="py-1 px-5 mr-3 bg-white rounded-full text-red-500 border border-red-500"
+                  >
+                    aircraft
+                  </button></a
+                >
+
+                <p class="text-xl text-black mt-4 font-bold">
+                  Quick and Easy Flaky Pastry for Tasty <br />
+                  Breakfast
+                </p>
+                <a href=""
+                  ><h3 class="text-red-500 text-lg font-bold mt-4">
+                    READ MORE
+                  </h3></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="footer ">
+        <div class="footer__content">
+          <div class="footer__content__text">
+            <p class="text-[29px] sm:text-[57px] text-center">
+              Producers of Metallic parts & <br />
+              global aerospace defence majors
+            </p>
+          </div>
+        </div>
+        <div class="footer__content">
+          <div class="footer__content__newsletter flex justify-center sm:justify-between">
+            <div class="footer__content__newsletter__title">
+              <p>
+                Join our newsletter to <br />
+                keep up to date with us
+              </p>
+            </div>
+            <div class="footer__content__newsletter__form">
+              <img src="img/user.svg" />
+              <input type="text" placeholder="Enter your email" />
+              <button><p>Subscribe</p></button>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="footer__content">
+          <div class="footer__content__about flex justify-center sm:justify-between">
+            <div class="footer__content__about__social">
+              <div class="footer__content__about__social__logo">
+                <img src="img/logo.svg" />
+                <span
+                  >We growing up your aerospace <br />
+                  managed componies</span
+                >
+              </div>
+              <div class="footer__content__about__social__icons flex  justify-center">
+                <span>
+                  <img class="element" src="img/facebookk.svg" />
+                </span>
+                <span>
+                  <img class="element" src="img/linkdin.svg" />
+                </span>
+                <span>
+                  <img class="element" src="img/insta.svg" />
+                </span>
+              </div>
+            </div>
+            <div class="footer__content__about__link flex items-center justify-center">
+              <div class="footer__content__about__link__row">
+                <a href="">Platform</a>
+                <a href="">About</a>
+                <a href="">Productes</a>
+                <a href="">Services</a>
+              </div>
+              <div class="footer__content__about__link__row">
+                <a href="">Company</a>
+                <a href="">Blog</a>
+                <a href="">Careers</a>
+                <a href="">News</a>
+              </div>
+              <div class="footer__content__about__link__row">
+                <a href="">Resources</a>
+                <a href="">Documentation</a>
+                <a href="">Papers</a>
+                <a href="">Press Conveferences</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="footer__content">
+          <div class="footer__content__privacy">
+            <div class="footer__content__privacy__year">
+              <span>@2024 Entek INC</span>
+            </div>
+            <div class="footer__content__privacy__links">
+              <a href="">Terms of Service</a>
+              <a href="">Privacy Policy</a>
+              <a href="">Cookies</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <style>
+        .card {
+          position: relative;
+          overflow: hidden;
+        }
+      </style> -->
+    </div>
+
+    <script>
+      function toggleMenu() {
+        var menuList = document.getElementById("menu-list");
+        menuList.style.display =
+          menuList.style.display === "flex" ? "" : "flex";
+      }
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+<script src="script.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.slider').slick({
+      dots: true,
+      infinite: true,
+      autoplay:true,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+      nextArrow: '<button type="button" class="slick-next">Next</button>',
+      responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              autoplay:true,
+              infinite: true,
+              dots: true
             }
-          </script>
-          <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-          <script>
-            feather.replace();
-
-const cards = document.querySelectorAll(".card");
-let currentIndex = 0;
-
-function updateCardVisibility() {
-  cards.forEach((card, index) => {
-    if (index === currentIndex) {
-      card.classList.add("active");
-    } else {
-      card.classList.remove("active");
-    }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              autoplay:true,
+              infinite: true,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              autoplay:true,
+              infinite: true,
+              slidesToScroll: 1
+            }
+          }
+        ]
+    });
   });
-}
+</script>
 
-function showNextCard() {
-  if (currentIndex < cards.length - 1) {
-    currentIndex++;
-    updateCardVisibility();
-  }
-}
+<script>
+  $(document).ready(function(){
+    $('.autoplay').slick({
+      dots: true,
+      infinite: true,
+      autoplay:true,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+      nextArrow: '<button type="button" class="slick-next">Next</button>',
+      responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 4,
+              autoplay:true,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              autoplay:true,
+              infinite: true,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              autoplay:true,
+              infinite: true,
+              slidesToScroll: 1
+            }
+          }
+        ]
+    });
+  });
+</script>
 
-function showPrevCard() {
-  if (currentIndex > 0) {
-    currentIndex--;
-    updateCardVisibility();
-  }
-}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
 
-updateCardVisibility(); // Initial setup
-          </script>
-          <script src="script.js"></script>
-    </body>
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('slide-in-from-right');
+          } else {
+            entry.target.classList.remove('slide-in-from-right');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    elementsToAnimate.forEach((element) => {
+      observer.observe(element);
+    });
+  });
+</script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const blogSection = document.querySelector('.page_blog_cards');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          } else {
+            entry.target.classList.remove('in-view');
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(blogSection);
+  });
+</script>
+<script>
+  $(document).ready(function(){
+    $('.product-slider').slick({
+      slidesToShow: 5,
+      slidesToScroll: 5,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      prevArrow: '<button type="button" class="slick-prev">&#8249;</button>',
+      nextArrow: '<button type="button" class="slick-next">&#8250;</button>',
+      responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              autoplay:true,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              autoplay:true,
+              infinite: true,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              autoplay:true,
+              infinite: true,
+              slidesToScroll: 1
+            }
+          }
+        ]
+    });
+  });
+</script>
+
+  </body>
 </html>

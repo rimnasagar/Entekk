@@ -20,19 +20,20 @@
   /* HAMBURGER MENU */
 .menu-list {
   display: none;
-  width: 100vw;
+  width: 100vh;
   flex-direction: column;
   row-gap: 1.5rem;
-  background: #cbcbcb;
+  background: #38148dc4;
   position: absolute;
   left: -30px;
   justify-content: center;
   align-items: center;
-  padding: 23rem 0 5rem 0;
+  padding: 10px;
+  
   z-index: 99;
 }
 .menu-list .text-wrapper {
-  color: black;
+  color: #fff;
 }
 .contact-us {
   display: none !important;

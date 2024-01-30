@@ -726,7 +726,7 @@ align-items: center;
     letter-spacing: -2px;
     }
     .page__gettoknow__form{
-      padding-left:22rem;
+      /* padding-left:22rem; */
     }
     .page__gettoknow__img img{
       width: 717px;
@@ -1702,7 +1702,7 @@ letter-spacing: 1.133px;
         padding: 1rem 0;
     }
     .footer__content__text p {
-        font-size: 57px;
+        /* font-size: 57px; */
         position: relative;
         height: 100%;
         display: flex;
