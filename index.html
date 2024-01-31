@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="styleguide.css" />
     <link rel="stylesheet" href="media.css" />
+    <link rel="stylesheet" href="scroll-style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
     <!-- Latest compiled and minified CSS -->
@@ -13,6 +14,7 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
     />
+    
     <title>Entek</title>
     <style>
       /* Additional custom styles for the slider */
@@ -28,232 +30,15 @@
     </style>
 
     <style>
-      @keyframes slideInLeft {
-        0% {
-          opacity: 0;
-          transform: translateX(-50px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-    
-      @keyframes slideInRight {
-        0% {
-          opacity: 0;
-          transform: translateX(50px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-    
-      @keyframes slideInBottom {
-        0% {
-          opacity: 0;
-          transform: translateY(50px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-    
-      .page__blog {
-        opacity: 0;
-        animation: fadeIn 0.5s ease-out forwards;
-      }
-    
-      .in-view .page__blog {
-        opacity: 1;
-      }
-
-</style>
-
-    <style>
      
-  @keyframes slideInFromRight {
-    0% {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  .slide-in-from-right {
-    animation: slideInFromRight 1s ease-out 12s; /* Adjust the duration and timing function as needed */
-  }
-  .slide-in-from-rightt {
-    animation: slideInFromRight 1s ease-out 13s; /* Adjust the duration and timing function as needed */
-  }
-  .slide-in-from-righttt {
-    animation: slideInFromRight 1s ease-out 14s; /* Adjust the duration and timing function as needed */
-  }
-  .slide-in-from-righttt {
-    animation: slideInFromRight 1s ease-out 15s; /* Adjust the duration and timing function as needed */
-  }
-  .slide-in-from-righttt {
-    animation: slideInFromRight 1s ease-out 16s; /* Adjust the duration and timing function as needed */
-  }
-</style>
-<style>
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .page__client__list img {
-    opacity: 0;
-    animation: fadeIn 0.5s ease-out 19s forwards; /* Initial delay before the first animation */
-    animation-iteration-count: infinite; /* Repeat the animation infinitely */
-  }
-
-  .page__client__list img:nth-child(1) {
-    animation-delay: 0.5s; /* Adjust the delay for the first image */
-  }
-
-  .page__client__list img:nth-child(2) {
-    animation-delay: 1s; /* Increase the delay for subsequent images */
-  }
-
-  .page__client__list img:nth-child(3) {
-    animation-delay: 2s;
-  }
-
-  .page__client__list img:nth-child(4) {
-    animation-delay: 3s;
-  }
-
-  .page__client__list img:nth-child(5) {
-    animation-delay: 4s;
-  }
-
-  .page__client__list img:nth-child(6) {
-    animation-delay: 5s; /* Adjust the delay for the repeat */
-  }
 </style>
 
-    <style>
-      @keyframes slideInFromLeft {
-        0% {
-          transform: translateX(-100%);
-        }
-        100% {
-          transform: translateX(0);
-        }
-      }
-      @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  .fade-in {
-    animation: slideInFromLeft 1.5s ease-out 1s; /* Adjust the duration, timing function, and delay as needed */
-  }
-  .delayed-fade-in {
-    animation: slideInFromLeft 1.5s ease-out 2s; /* Adjust the duration, timing function, and delay as needed */
-  }
-  .delayed-fade-in-2{
-    animation: slideInFromLeft 1.5s ease-out 3s;
-  }
-  .delayed-fade-in-3{
-    animation: slideInFromLeft 1.5s ease-out 4s;
-  }
-  .fade-inn {
-    animation: slideInFromLeft 1.5s ease-out 6s; /* Adjust the duration, timing function, and delay as needed */
-  }
-  .delayed-fade-inn {
-    animation: slideInFromLeft 1.5s ease-out 7s; /* Adjust the duration, timing function, and delay as needed */
-  }
-  .delayed-fade-inn-2{
-    animation: slideInFromLeft 1.5s ease-out 8s;
-  }
-  .delayed-fade-inn-3{
-    animation: slideInFromLeft 1.5s ease-out 9s;
-  }
-    
-      .slide-in-from-left {
-        animation: slideInFromLeft 1.5s ease-out; /* Adjust the duration and timing function as needed */
-      }
-      .slide-in-from-leftt {
-        animation: slideInFromLeft 1.5s ease-out 1s; /* Adjust the duration and timing function as needed */
-      }
-      </style>
-    <style>
-      @keyframes slideInFromBottom {
-        0% {
-          transform: translateY(100%);
-        }
-        100% {
-          transform: translateY(0);
-        }
-      }
-    
-      .slide-in-from-bottom {
-        animation: slideInFromBottom 1.5s ease-out; /* Adjust the duration and timing function as needed */
-      }
-      .slide-in-from-bottom1 {
-        animation: slideInFromBottom 1.5s ease-out 7s; /* Adjust the duration and timing function as needed */
-      }
-      .slide-in-from-bottom2 {
-        animation: slideInFromBottom 1.5s ease-out 9s; /* Adjust the duration and timing function as needed */
-      }
-      .slide-in-from-bottom3 {
-        animation: slideInFromBottom 1.5s ease-out 17s; /* Adjust the duration and timing function as needed */
-      }
-      </style>
-    <style>
-      @keyframes fadeInLeft {
-        0% {
-          opacity: 0;
-          transform: translateX(-20px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-  
-      @keyframes fadeInRight {
-        0% {
-          opacity: 0;
-          transform: translateX(20px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-  
-      /* Left Section Animation */
-      .left-section {
-        animation: fadeInLeft 1s ease-out;
-      }
-  
-      /* Right Section Animation */
-      .right-section {
-        animation: fadeInRight 1s ease-out;
-      }
-    </style>
+ 
 
     <style>
       @keyframes helicopterAnimation {
-        0%, 100% {
-          transform: translateX(-50%);
+        0% {
+          transform: translateX(100%);
         }
         50% {
           transform: translateX(50%);
@@ -353,7 +138,7 @@
                        </div> -->
             <div class="page__req__main__content text-center relative">
               <h5
-                class="text-4xl lg:text-8xl xl:text-8xl text-white mb-5 sm:mb-10 font-bold italic slide-in-from-bottom"
+                class="text-4xl lg:text-8xl xl:text-8xl text-white mb-5 sm:mb-10 font-bold italic slide-up"
               >
                 DETERMINED TO DREAM<br />DRIVEN TO DELIVER
               </h5>
@@ -397,38 +182,38 @@
             class="flex flex-col justify-center md:ml-40 lg: ml-20 lg:mr-20 sm:ml-20 sm:mr-20 left-section"
           >
             <h2
-              class="text-2xl font-bold mb-5 text-[#2a4c95] italic font-montserrat slide-in-from-left"
+              class="text-2xl font-bold mb-5 text-[#2a4c95] italic font-montserrat slide-right"
             >
               GET TO KNOW US
             </h2>
             <h5
-              class="text-7xl font-bold mb-5 text-[#2a4c95] font-montserrat line-height-[1.2] fade-in"
+              class="text-7xl font-bold mb-5 text-[#2a4c95] font-montserrat line-height-[1.2] slide-left"
             >
-              Our jetly save your time<br />and give you comfort in<br />flights
+              Our jetly save your time and give you comfort in flights
             </h5>
-            <p class="font-montserrat text-[#2a4c95] line-height-[1.2] mb-2 delayed-fade-in">
+            <p class="font-montserrat text-[#2a4c95] line-height-[1.2] mb-2 slide-right">
               Non augue egestas, commodo velit eget, vestibulum tellus.
               Curabitur<br />vulputate justo elit, at elementum orci pulvinar
               vel. Pellentesque habitant morbi<br />
               tristique. Pellentesque habitant morbi tristique. Ut non augue
               egestas,<br />commodo velit eget, vestibulum tellus.
             </p>
-            <div class="flex items-center mt-5 delayed-fade-in-2">
+            <div class="flex items-center mt-5 slide-left">
               <img class="mr-2" src="img/check.svg" />
               <p class="text-[#2a4c95] font-bold mt-2 mb-2">
                 There are many variations of passage of lorem.
               </p>
             </div>
-            <div class="flex items-center delayed-fade-in-3">
+            <div class="flex items-center slide-right">
               <img class="mr-2" src="img/check.svg" />
               <p class="text-[#2a4c95] font-bold mt-2 mb-2">
                 There are many variations of passage of lorem.
               </p>
             </div>
-            <div class="flex items-center mt-8">
+            <div class="flex items-center mt-8 slide-up">
               <a href=""
                 ><button
-                  class="py-5 px-10 mr-5 bg-[#2a4c95] rounded-full text-white"
+                  class="py-5 px-10 mr-5 bg-[#2a4c95] rounded-full text-white "
                 >
                   BOOK NOW
                 </button></a
@@ -454,11 +239,11 @@
           </div>
 
           <!-- Right Section -->
-          <div class="flex justify-center right-section">
+          <div class="flex justify-center right-section slide-left">
             <div style="position: relative">
               <img
                 src="img/pexels-nicolas-petremann-3121030 1.png"
-                class="w-[80%] sm:w-full h-auto"
+                class="w-[80%] mx-auto sm:mx-0 sm:w-full h-auto"
                 alt="Your Image"
               />
               <div  class="absolute bottom-[60px] right-[38px] sm:right-[-60px]">
@@ -499,12 +284,12 @@
             <!-- Image with Linear Gradient Overlay -->
             <div class="relative w-full h-full  ">
              <div class="w-full h-full ml-4 p-5 bg-red-700 text-white flex flex-col my-auto justify-evenly ">
-                 <h4 class="text-2xl font-bold italic mt-10 slide-in-from-bottom ">OUR INDUSTRIES</h4>
-                 <h3 class="text-4xl font-semibold mb-5 mt-2 slide-in-from-left">
-                   Get Discount next <br />
+                 <h4 class="sm:text-3xl font-bold italic mt-10 slide-in-from-bottom italic ">OUR INDUSTRIES</h4>
+                 <h5 class="sm:text-6xl font-bold mb-5 mt-2">
+                   Get Discount next 
                    aerocraft products
-                 </h3>  
-                 <p class="mb-5 fade-in">
+                 </h5>  
+                 <p class="mb-5 fade-in sm:text-2xl font-light sm:leading-[27px]">
                      Non augue egestas, commodo velit eget,
                      vestibulum tellus. Curabiturvulputate justo elit, at
                      elementum orci
@@ -513,7 +298,7 @@
                      egestas,commodo velit eget, vestibulum tellus.
                    </p>
                    <button
-                       class="bg-white text-red-700 rounded-full w-fit font-bold px-20 py-8 delayed-fade-in"
+                       class="bg-white text-red-700 rounded-full w-fit font-bold px-20 py-8"
                      >
                        View All
                      </button>
@@ -675,7 +460,7 @@
           <div class="flex justify-between w-full flex-col-reverse sm:flex-row">
             <!-- Form Section (Left Side) -->
             <div
-              class="w-full  p-8 rounded-lg shadow-lg relative flex items-center"
+              class="w-full  p-8 rounded-lg shadow-lg relative flex items-center slide-right"
             >
               <div class="page__gettoknow__form pt-20  flex  justify-center items-center sm:justify-start sm:items-start flex-col sm:pl-[22rem]">
                 <h3
@@ -740,7 +525,7 @@
             </div>
 
             <!-- Image Section (Right Side) -->
-            <div class="">
+            <div class="slide-left">
               <img
                 src="img/Group-9.png"
                 alt="Your Image"
@@ -752,7 +537,7 @@
       </section>
 
       <section class="page__client__feedback">
-        <div class="page__client__feedback__heading">
+        <div class="page__client__feedback__heading slide-up">
           <div class="page__client__feedback__heading1 slide-in-from-bottom">
             <p class="">CLIENT FEEDBACK</p>
           </div>
@@ -765,10 +550,10 @@
         <div
           class=" flex flex-col md:flex-row page__client__feedback__testimonial slide-in-from-bottom2"
         >
-          <div class="div-testimonial-one-2 left-section sm:p-0 p-[10px] sm:mb-0 mb-5 w-full h-full sm:w-fit sm:h-auto">
+          <div class="div-testimonial-one-2 left-section slide-right">
             <div class="overlap-group-3">
-              <img class="testimonial-jpg ml-2 sm:ml-0" src="img/testimonial-1.png" />
-              <div class="span-icon-quote hidden sm:block">
+              <img class="testimonial-jpg" src="img/testimonial-1.png" />
+              <div class="span-icon-quote ">
                 <div class="symbol-3"></div>
               </div>
             </div>
@@ -788,10 +573,10 @@
             </div>
           </div>
 
-          <div class="div-testimonial-one-2 flex sm:mr-2 right-section sm:p-0 p-[10px] sm:mb-0 mb-5 w-full h-full sm:w-fit sm:h-auto ">
+          <div class="div-testimonial-one-2 flex right-section  slide-left">
             <div class="overlap-group-3">
-              <img class="testimonial-jpg ml-2 sm:ml-0" src="img/testimonial-2.png" />
-              <div class="span-icon-quote hidden sm:block">
+              <img class="testimonial-jpg " src="img/testimonial-2.png" />
+              <div class="span-icon-quote">
                 <div class="symbol-3"></div>
               </div>
             </div>
@@ -815,7 +600,7 @@
 
       <section class="page__ourclients">
         <div class="parent__div__client bg-white w-full h-full mt-20 mb-10">
-          <div class="page__client__content mt-5">
+          <div class="page__client__content mt-5 slide-up">
             <h2 class="text-[#2a4c95] text-center text-5xl font-bold">
               Our Clients
             </h2>
@@ -847,7 +632,7 @@
           </div>
 
           <!-- Container -->
-          <div class="container mx-auto relative z-10">
+          <div class="container mx-auto relative z-10 slide-up">
             <!-- Heading Titles -->
             <h3 class="text-3xl font-semibold text-[#2a4c95] mb-5 mt-[60px]">
               OUR PRODUCTS
@@ -1073,27 +858,27 @@
         <div class="page__requirements__parent bg-[#2a4c95] w-full h-auto">
           <div class="relative h-fit">
             <img
-              src="img/div.video-one__bg.png"
+              src="img/div.video-one__1bg.png"
               alt=""
-              class="mx-auto object-cover"
+              class="mx-auto object-cover opacity-20" 
             />
             <div
               class="page__requirements__content flex w-full h-full justify-center items-center absolute top-0 left-0"
             >
               <div class="page__req__main__content text-center w-fit">
                 <img src="img/link.svg" alt="" class="mx-auto" />
-                <h2 class="text-5xl text-white my-10">
+                <h2 class="text-5xl text-white my-10 slide-up">
                   Share requirements and our<br />experts will send you a quote
                 </h2>
                 <a href=""
                   ><button
-                    class="py-5 px-10 mr-3 bg-red-500 rounded-full text-white"
+                    class="py-5 px-10 mr-3 bg-red-500 rounded-full text-white slide-right"
                   >
                     BOOK NOW
                   </button></a
                 >
                 <a href=""
-                  ><button class="py-5 px-10 bg-white text-black rounded-full">
+                  ><button class="py-5 px-10 bg-white text-black rounded-full slide-left">
                     READ MORE
                   </button></a
                 >
@@ -1107,7 +892,7 @@
           class="flex flex-col sm:flex-row justify-between items-center "
         >
           <!-- Left Section -->
-          <div class="w-[50%] flex justify-center left-section">
+          <div class="w-[50%] flex justify-center left-section slide-right">
             <div
               class="sm:mb-40 relative w-fit  flex justify-center"
             >
@@ -1120,7 +905,7 @@
           </div>
 
           <!-- Right Section -->
-          <div class="flex justify-center items-center mt-15 ml-20 sm:w-[50%] right-section">
+          <div class="flex justify-center items-center mt-15 ml-20 sm:w-[50%] right-section slide-left">
             <div class="relative m-20 p-10 sm:w-[60%] animate-on-scroll">
               <p class="text-4xl text-[#D73D35] font-bold mb-2 ">WHY ENTEC</p>
               <p class="text-6xl font-bold text-green-900 mb-8 ">
@@ -1160,7 +945,7 @@
         <div class="page__requirements__parent bg-[#2a4c95] w-full relative">
           <img src="img/locations.svg" alt="" class="mx-auto pt-80" />
           <div
-            class="page__requirements__content flex w-full h-full justify-center absolute top-0 left-0"
+            class="page__requirements__content flex w-full h-full justify-center absolute top-0 left-0 slide-up"
           >
             <div class="page__req__main__content text-center">
               <h2 class="text-2xl text-white mt-10 italic">SUPPORT</h2>
@@ -1177,12 +962,12 @@
         <div class="container mx-auto mt-10 p-4">
           <!-- Headings -->
           <h4
-            class="text-2xl text-[#2a4c95] mb-2 flex justify-center italic font-bold"
+            class="text-2xl text-[#2a4c95] mb-2 flex justify-center italic font-bold slide-up"
           >
             BLOG &amp; NEWS
           </h4>
           <h2
-            class="text-5xl text-[#2a4c95] font-semibold mb-28 flex justify-center font-bold"
+            class="text-5xl text-[#2a4c95] font-semibold mb-28 flex justify-center font-bold slide-up"
           >
             Our Latest Blog &amp; News
           </h2>
@@ -1191,7 +976,7 @@
           <div class="flex justify-center">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 page_blog_cards animate-on-scroll ">
               <!-- Card 1 -->
-              <div class="bg-white p-4 shadow-md relative">
+              <div class="bg-white p-4 shadow-md relative slide-right">
                 <div class="absolute top-[-14px] left-12 bg-red-500 px-6 py-4">
                   <p class="text-white text-5xl font-semibold">25</p>
                   <p class="text-white text-2xl">AUG</p>
@@ -1221,7 +1006,7 @@
               </div>
 
               <!-- Card 2 -->
-              <div class="bg-white p-4 shadow-md relative">
+              <div class="bg-white p-4 shadow-md relative slide-left">
                 <div class="absolute top-[-14px] left-12 bg-white px-6 py-4">
                   <p class="text-black text-5xl font-semibold">25</p>
                   <p class="text-black text-2xl">AUG</p>
@@ -1251,7 +1036,7 @@
               </div>
 
               <!-- Card 3 -->
-              <div class="bg-white p-4 shadow-md relative">
+              <div class="bg-white p-4 shadow-md relative slide-up">
                 <div class="absolute top-[-14px] left-12 bg-white px-6 py-4">
                   <p class="text-black text-5xl font-semibold">25</p>
                   <p class="text-black text-2xl font-bold">AUG</p>
@@ -1286,7 +1071,7 @@
       <section class="footer ">
         <div class="footer__content">
           <div class="footer__content__text">
-            <p class="text-[29px] sm:text-[57px] text-center">
+            <p class="text-[29px] sm:text-[57px] text-center slide-down">
               Producers of Metallic parts & <br />
               global aerospace defence majors
             </p>
@@ -1294,13 +1079,13 @@
         </div>
         <div class="footer__content">
           <div class="footer__content__newsletter flex justify-center sm:justify-between">
-            <div class="footer__content__newsletter__title">
+            <div class="footer__content__newsletter__title slide-right">
               <p>
                 Join our newsletter to <br />
                 keep up to date with us
               </p>
             </div>
-            <div class="footer__content__newsletter__form w-[40%] flex items-center justify-center sm:justify-end sm:w-[100%]">
+            <div class="slide-left footer__content__newsletter__form w-[40%] flex items-center justify-center sm:justify-end sm:w-[100%]">
               <img src="img/user.svg" />
               <input type="text" placeholder="Enter your email" />
               <button class=""><p>Subscribe</p></button>
@@ -1371,7 +1156,7 @@
           position: relative;
           overflow: hidden;
         }
-      </style> -->
+      </styl> -->
     </div>
 
     <script>
@@ -1384,6 +1169,7 @@
 <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
 <script src="script.js"></script>
+
 <script>
   $(document).ready(function(){
     $('.slider').slick({
@@ -1496,7 +1282,27 @@
     });
   });
 </script>
+<script>
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("trigger");
+    } 
+    // else
+    //  entry.target.classList.remove("trigger");
+  });
+  
+});
+const slideLeft = document.querySelectorAll(".slide-right,.slide-left,.fade-in,.button-slide-left,.line,.slide-up,.slide-down");
+
+
+
+
+
+slideLeft.forEach((el) => observer.observe(el));
+
+</script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -1559,7 +1365,8 @@
         ]
     });
   });
-</script>
+</script>  
+
 
   </body>
 </html>

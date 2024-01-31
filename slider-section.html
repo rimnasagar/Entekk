@@ -170,3 +170,223 @@ Aerospace <br />Facility
 
   grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5
   grid grid-cols-1  md:grid-cols-2 lg:grid-cols-5
+
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .page__blog {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .in-view .page__blog {
+    opacity: 1;
+  }
+
+</style>
+
+<style>
+ 
+@keyframes slideInFromRight {
+0% {
+  opacity: 0;
+  transform: translateX(100%);
+}
+100% {
+  opacity: 1;
+  transform: translateX(0);
+}
+}
+
+.slide-in-from-right {
+animation: slideInFromRight 1s ease-out 12s; /* Adjust the duration and timing function as needed */
+}
+.slide-in-from-rightt {
+animation: slideInFromRight 1s ease-out 13s; /* Adjust the duration and timing function as needed */
+}
+.slide-in-from-righttt {
+animation: slideInFromRight 1s ease-out 14s; /* Adjust the duration and timing function as needed */
+}
+.slide-in-from-righttt {
+animation: slideInFromRight 1s ease-out 15s; /* Adjust the duration and timing function as needed */
+}
+.slide-in-from-righttt {
+animation: slideInFromRight 1s ease-out 16s; /* Adjust the duration and timing function as needed */
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .page__client__list img {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 19s forwards; /* Initial delay before the first animation */
+    animation-iteration-count: 2; /* Repeat the animation infinitely */
+  }
+
+  .page__client__list img:nth-child(1) {
+    animation-delay: 0.5s; }
+
+  .page__client__list img:nth-child(2) {
+    animation-delay: 1s; 
+  }
+
+  .page__client__list img:nth-child(3) {
+    animation-delay: 2s;
+  }
+
+  .page__client__list img:nth-child(4) {
+    animation-delay: 3s;
+  }
+
+  .page__client__list img:nth-child(5) {
+    animation-delay: 4s;
+  }
+
+  .page__client__list img:nth-child(6) {
+    animation-delay: 5s; 
+  }
+</style>
+
+    <style>
+      @keyframes slideInFromLeft {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .fade-in {
+    animation: slideInFromLeft 1.5s ease-out 1s; /* Adjust the duration, timing function, and delay as needed */
+  }
+  .delayed-fade-in {
+    animation: slideInFromLeft 1.5s ease-out 2s; /* Adjust the duration, timing function, and delay as needed */
+  }
+  .delayed-fade-in-2{
+    animation: slideInFromLeft 1.5s ease-out 3s;
+  }
+  .delayed-fade-in-3{
+    animation: slideInFromLeft 1.5s ease-out 4s;
+  }
+  .fade-inn {
+    animation: slideInFromLeft 1.5s ease-out 6s; /* Adjust the duration, timing function, and delay as needed */
+  }
+  .delayed-fade-inn {
+    animation: slideInFromLeft 1.5s ease-out 7s; /* Adjust the duration, timing function, and delay as needed */
+  }
+  .delayed-fade-inn-2{
+    animation: slideInFromLeft 1.5s ease-out 8s;
+  }
+  .delayed-fade-inn-3{
+    animation: slideInFromLeft 1.5s ease-out 9s;
+  }
+    
+      .slide-in-from-left {
+        animation: slideInFromLeft 1.5s ease-out; /* Adjust the duration and timing function as needed */
+      }
+      .slide-in-from-leftt {
+        animation: slideInFromLeft 1.5s ease-out 1s; /* Adjust the duration and timing function as needed */
+      }
+      </style>
+    <style>
+      @keyframes slideInFromBottom {
+        0% {
+          transform: translateY(100%);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+    
+      .slide-in-from-bottom {
+        animation: slideInFromBottom 1.5s ease-out; /* Adjust the duration and timing function as needed */
+      }
+      .slide-in-from-bottom1 {
+        animation: slideInFromBottom 1.5s ease-out 7s; /* Adjust the duration and timing function as needed */
+      }
+      .slide-in-from-bottom2 {
+        animation: slideInFromBottom 1.5s ease-out 9s; /* Adjust the duration and timing function as needed */
+      }
+      .slide-in-from-bottom3 {
+        animation: slideInFromBottom 1.5s ease-out 17s; /* Adjust the duration and timing function as needed */
+      }
+      </style>
+    <style>
+      @keyframes fadeInLeft {
+        0% {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+  
+      @keyframes fadeInRight {
+        0% {
+          opacity: 0;
+          transform: translateX(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+  
+      /* Left Section Animation */
+      .left-section {
+        animation: fadeInLeft 1s ease-out;
+      }
+  
+      /* Right Section Animation */
+      .right-section {
+        animation: fadeInRight 1s ease-out;
+      }
+    </style>

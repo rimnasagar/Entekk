@@ -211,6 +211,9 @@
     .page__overlap__body .page__overlap__body__content__p{
         font-size: 72px;
     }
+    .text-wrapper{
+      font-size: 16px;
+    }
 
     /* HEADER NAV LINKS */
 
@@ -238,7 +241,9 @@
 
 @media only screen and (min-width: 1025px) and (max-width: 1200px) { 
     
-    
+  .text-wrapper{
+    font-size: 16px;
+  } 
    /* SECTION PAGE OVERLAP */
 .page__overlap__body .page__overlap__body__content__p{
     font-size: 89px;
@@ -270,6 +275,9 @@
 /* SECTION PAGE OVERLAP */
 .page__overlap__body .page__overlap__body__content__p{
     font-size: 89px;
+}
+.text-wrapper{
+  font-size: 16px;
 }
 
 /* BOOKNOW */
